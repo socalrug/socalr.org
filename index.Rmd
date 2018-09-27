@@ -97,7 +97,7 @@ cards <- clean_events(events) %>%
 ```{r, echo = FALSE, layout="l-body-outset"}
 library(fontawesome)
 as_link <- function(link, icon, ...) {
-  tags$a(style = "text-decoration:none", href = link, fa(icon, height = "2rem", fill = "steelblue"), ...)
+  tags$a(style = "text-decoration:none", href = link, fa(icon, height = "1.8rem", fill = "steelblue"), ...)
 }
 
 as_meetup <- function(x) {
@@ -180,7 +180,9 @@ fa_rows <- laocrugs %>%
 ```
 
 <div class="card">
+<div class="container">
 `r tagList(fa_rows)`
+</div>
 </div>
 <br>
 

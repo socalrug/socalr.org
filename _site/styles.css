@@ -34,10 +34,13 @@ body {
 }
 
 d-title {
+  width: 100%;
   padding-top: 6rem;
-  background-image: url("images/headertest2.jpg");
-  background-size: 150%;
-  background-position: 0% 45%; 
+  background-image: url("images/header5.jpg");
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
   font-family: 'Bungee Shade', cursive; 
 }
 
@@ -108,7 +111,7 @@ ul.network-icon{
 }
 
 .fa-row-name {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  padding: 4px 24px;
+  padding: 2px 24px;
 }
