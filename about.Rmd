@@ -1,0 +1,18 @@
+---
+title: "Los Angeles and Orange County R Users"
+output:
+  radix::radix_article:
+    includes:
+      in_header: header.html
+    css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+laocrugs <- read_csv("laocrugs.csv")
+laocrugs <- laocrugs %>% 
+  sample_n(nrow(laocrugs))
+```
+
+We are an alliance of R users groups in Los Angeles and Orange County. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.

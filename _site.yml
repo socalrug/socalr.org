@@ -1,0 +1,15 @@
+name: "laocrug"
+title: "Los Angeles and Orange County R Users"
+description: |
+  An Alliance of R Users Groups in LA and OC
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Calendar"
+      href: calendar.html
+    - text: "About"
+      href: about.html
+      
+output: radix::radix_article

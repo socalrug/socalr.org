@@ -1,0 +1,206 @@
+---
+title: "Los Angeles and Orange County R Users"
+output:
+  radix::radix_article:
+    includes:
+      in_header: header.html
+    css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(knitr.kable.NA = "--")
+
+# Learn more about creating websites with Radix at:
+# https://rstudio.github.io/radix/website.html
+
+```
+
+```{r, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(googledrive)
+drive_download("laocrugs", type = "csv", overwrite = TRUE)
+laocrugs <- read_csv("laocrugs.csv")
+laocrugs <- laocrugs %>% 
+  sample_n(nrow(laocrugs))
+```
+
+We are an alliance of R users groups in Los Angeles and Orange County. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
+
+<div class="headers">
+<h1>Upcoming Events</h1>
+</div>
+
+```{r, include=FALSE}
+library(meetupr)
+get_any_events <- safely(get_events)
+
+pull_events <- function(.meetup_page, .group_name) {
+  events <- get_any_events(.meetup_page)
+  if (!is.null(events$result)) events$result$group_name <- .group_name
+  events
+}
+
+laocrugs_meetups <- laocrugs %>% 
+  filter(group_name != "Data Science LA/LA West R Users Group")
+
+events <- map2(laocrugs_meetups$meetup_page, 
+               laocrugs_meetups$group_name,
+               pull_events) %>% 
+  map(pluck(1)) %>% 
+  bind_rows()
+```
+
+```{r}
+library(htmltools)
+
+clean_events <- function(events_data) {
+  months <- lubridate::month(events$time)
+  month_abbs <- month.abb[months]
+  days <- lubridate::day(events$time)
+  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
+  events_data$event_time <- paste(month_abbs, days, "at", hours)
+  events_data %>% 
+    arrange(time) %>% 
+    head(5) %>% 
+    select(event_name = name, group_name, event_time, link)
+}
+
+as_card <- function(event_name, group_name, event_time, link, ...) {
+  tags$div(
+    class = "card",
+    tags$a(href = link,
+      class = "action_link",
+      div(class = "container",
+        tags$div(group_name, class = "card-group"),
+        tags$div(event_name, class = "card-header"),
+        tags$div(event_time, class = "card-time")
+      )
+    )
+  )
+}
+```
+
+```{r}
+# `r clean_events(events) %>% pmap(as_card) %>% map(cat)`
+
+cards <- clean_events(events) %>% 
+  pmap(as_card)
+```
+
+`r tagList(cards)`
+
+<div class="headers">
+<h1>Organizations</h1>
+</div>
+
+```{r, echo = FALSE, layout="l-body-outset"}
+library(fontawesome)
+as_link <- function(link, icon, ...) {
+  tags$a(style = "text-decoration:none", href = link, fa(icon, height = "2rem", fill = "steelblue"), ...)
+}
+
+as_meetup <- function(x) {
+  if (is.na(x)) {
+    return(NULL)
+  } else {
+  as_link(paste0("https://meetup.com/", x), 
+        "meetup") %>% 
+    tags$li()
+  }
+}
+
+as_email <- function(x) {
+  if (is.na(x)) {
+    return(NULL)
+  } else {
+  as_link(paste0("mailto:", x), 
+        "envelope") %>% 
+    tags$li()
+  }
+}
+
+as_website <- function(x) {
+  if (is.na(x)) {
+    return(NULL)
+  } else {
+  as_link(x, 
+        "link") %>% 
+    tags$li()
+  }
+}
+
+as_twitter <- function(x) {
+  if (is.na(x)) {
+    return(NULL)
+  } else {
+  clean_name <- str_replace_all(x, "@", "")
+  as_link(paste0("https://twitter.com/", clean_name), 
+          "twitter") %>% 
+      tags$li()
+  }
+}
+
+as_github <- function(x) {
+  if (is.na(x)) {
+    return(NULL)
+  } else {
+  clean_name <- str_replace_all(x, "@", "")
+  as_link(paste0("https://github.com/", clean_name), 
+        "github") %>% 
+    tags$li()
+  }
+}
+
+as_slack <- function(x) {
+  if (is.na(x)) {
+    return(NULL)
+  } else {
+  as_link(paste0("https://", x, ".slack.com/"), 
+        "slack") %>% 
+    tags$li()
+  }
+}
+
+as_group_name <- function(x) {
+  tags$div(x, class = "fa-row-name")
+}
+
+as_ul <- function(...) {
+  tags$ul(class = "network-icon",  ...)
+}
+
+fa_row <- function(group_name, website, meetup_page, twitter, github, slack) {
+  as_ul(as_group_name(group_name), as_website(website), as_meetup(meetup_page), as_twitter(twitter), as_github(github), as_slack(slack))
+}
+
+fa_rows <- laocrugs %>%
+  select(group_name, website, meetup_page, twitter, github, slack) %>% 
+  pmap(fa_row)
+```
+
+<div class="card">
+`r tagList(fa_rows)`
+</div>
+<br>
+
+```{r, layout="l-screen-inset", cache=TRUE}
+library(leaflet)
+library(ggmap)
+ggmap::register_google("AIzaSyBFkf5o3bW7blAGb_E7-ZNhxk3QBFtqQko")
+addresses <- ggmap::geocode(laocrugs$address)
+
+icons <- awesomeIcons(
+  icon = 'ios-stats',
+  iconColor = 'black',
+  library = 'ion'
+)
+
+bind_cols(laocrugs, addresses) %>% 
+  leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon=icons)
+  # doesn't work right now: addMarkers(~lon, ~lat, popup = ~group_name, icon = icons("https://www.r-project.org/logo/Rlogo.png", iconWidth = 25, iconHeight = 19))
+```
+
+
