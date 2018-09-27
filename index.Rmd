@@ -170,12 +170,12 @@ as_ul <- function(...) {
   tags$ul(class = "network-icon",  ...)
 }
 
-fa_row <- function(group_name, website, meetup_page, twitter, github, slack) {
-  as_ul(as_group_name(group_name), as_website(website), as_meetup(meetup_page), as_twitter(twitter), as_github(github), as_slack(slack))
+fa_row <- function(group_name, website, email, meetup_page, twitter, github, slack) {
+  as_ul(as_group_name(group_name), as_website(website), as_email(email), as_meetup(meetup_page), as_twitter(twitter), as_github(github), as_slack(slack))
 }
 
 fa_rows <- laocrugs %>%
-  select(group_name, website, meetup_page, twitter, github, slack) %>% 
+  select(group_name, website, email, meetup_page, twitter, github, slack) %>% 
   pmap(fa_row)
 ```
 
