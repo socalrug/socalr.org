@@ -16,3 +16,5 @@ laocrugs <- laocrugs %>%
 ```
 
 We are an alliance of R users groups in Los Angeles and Orange County. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
+
+If you are a new R organization in the area and would like to join, please [contact us](mailto:laerug@gmail.com).

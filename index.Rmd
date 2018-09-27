@@ -35,8 +35,8 @@ We are an alliance of R users groups in Los Angeles and Orange County. No single
 library(meetupr)
 get_any_events <- safely(get_events)
 
-pull_events <- function(.meetup_page, .group_name) {
-  events <- get_any_events(.meetup_page)
+pull_events <- function(.meetup_page, .group_name, ...) {
+  events <- get_any_events(.meetup_page, ...)
   if (!is.null(events$result)) events$result$group_name <- .group_name
   events
 }
@@ -49,20 +49,43 @@ events <- map2(laocrugs_meetups$meetup_page,
                pull_events) %>% 
   map(pluck(1)) %>% 
   bind_rows()
+
+past_laocrugs_meetups <- laocrugs %>% 
+  filter(group_name != "Los Angeles East R Users Group")
+
+past_events <- map2(past_laocrugs_meetups$meetup_page, 
+               past_laocrugs_meetups$group_name,
+               pull_events, event_status = "past") %>% 
+  map(pluck(1)) %>% 
+  bind_rows()
+
+past_events <- past_events %>% 
+  group_by(group_name) %>% 
+  arrange(desc(time)) %>% 
+  slice(1:3) %>% 
+  ungroup()
+
+write_rds(events, "events.rds")
+write_rds(past_events, "past_events.rds")
 ```
 
 ```{r}
 library(htmltools)
 
-clean_events <- function(events_data) {
-  months <- lubridate::month(events$time)
+clean_events <- function(events_data, descending = FALSE) {
+  months <- lubridate::month(events_data$time)
   month_abbs <- month.abb[months]
-  days <- lubridate::day(events$time)
+  days <- lubridate::day(events_data$time)
   hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
   events_data$event_time <- paste(month_abbs, days, "at", hours)
+  
+  if (descending) {
+    events_data <- arrange(events_data, desc(time))
+    } else {
+    events_data <- arrange(events_data, time)
+  }
+  
   events_data %>% 
-    arrange(time) %>% 
-    head(5) %>% 
     select(event_name = name, group_name, event_time, link)
 }
 

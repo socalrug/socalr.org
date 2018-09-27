@@ -11,4 +11,63 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-<iframe src="https://calendar.google.com/calendar/embed?src=bbfa86e9m6j7phdt5d7vkhbcqs%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+<div class="headers">
+<h1>All Upcoming Events</h1>
+</div>
+
+```{r}
+library(tidyverse)
+library(htmltools)
+
+events <- read_rds("events.rds")
+past_events <- read_rds("past_events.rds")
+
+clean_events <- function(events_data, descending = FALSE) {
+  months <- lubridate::month(events_data$time)
+  month_abbs <- month.abb[months]
+  days <- lubridate::day(events_data$time)
+  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
+  events_data$event_time <- paste(month_abbs, days, "at", hours)
+  
+  if (descending) {
+    events_data <- arrange(events_data, desc(time))
+    } else {
+    events_data <- arrange(events_data, time)
+  }
+  
+  events_data %>% 
+    select(event_name = name, group_name, event_time, link)
+}
+
+as_card <- function(event_name, group_name, event_time, link, ...) {
+  tags$div(
+    class = "card",
+    tags$a(href = link,
+      class = "action_link",
+      div(class = "container",
+        tags$div(group_name, class = "card-group"),
+        tags$div(event_name, class = "card-header"),
+        tags$div(event_time, class = "card-time")
+      )
+    )
+  )
+}
+```
+
+```{r}
+cards <- clean_events(events) %>% 
+  pmap(as_card)
+```
+
+`r tagList(cards)`
+
+<div class="headers">
+<h1>Recent Events</h1>
+</div>
+
+```{r}
+past_cards <- clean_events(past_events, descending = TRUE) %>% 
+  pmap(as_card)
+```
+
+`r tagList(past_cards)`
