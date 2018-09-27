@@ -103,9 +103,17 @@ ul.network-icon{
   margin-top: 15px
 }
 
-.network-icon li{margin-right:20px}
-.network-icon li:last-of-type{margin-right:0}
-.network-icon li:hover{transform:scale(1.4)}
+.network-icon li{
+  margin-right:20px; 
+}
+.network-icon li:last-of-type{
+  margin-right:0
+}
+
+.network-icon li:hover{
+  transform:scale(1.4)
+}
+
 .network-icon a {
     text-decoration: none!important;
 }
