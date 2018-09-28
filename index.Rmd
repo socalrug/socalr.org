@@ -212,7 +212,7 @@ fa_rows <- laocrugs %>%
 ```{r, layout="l-screen-inset"}
 library(leaflet)
 library(ggmap)
-ggmap::register_google("AIzaSyBFkf5o3bW7blAGb_E7-ZNhxk3QBFtqQko")
+ggmap::register_google(getOption("google.api.key"))
 addresses <- ggmap::geocode(laocrugs$address)
 
 icons <- awesomeIcons(
