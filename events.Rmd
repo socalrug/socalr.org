@@ -1,5 +1,5 @@
 ---
-title: "Upcoming LA/OC R User Group Events"
+title: "Los Angeles and Orange County R Users"
 output:
   radix::radix_article:
     includes:

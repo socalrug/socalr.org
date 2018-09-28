@@ -209,7 +209,7 @@ fa_rows <- laocrugs %>%
 </div>
 <br>
 
-```{r, layout="l-screen-inset", cache=TRUE}
+```{r, layout="l-screen-inset"}
 library(leaflet)
 library(ggmap)
 ggmap::register_google("AIzaSyBFkf5o3bW7blAGb_E7-ZNhxk3QBFtqQko")
