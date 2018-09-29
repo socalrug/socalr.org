@@ -190,7 +190,9 @@ as_group_name <- function(x) {
 }
 
 as_ul <- function(...) {
-  tags$ul(class = "network-icon",  ...)
+  tags$div(class = "fa-row",
+    tags$ul(class = "network-icon",  ...)
+  )
 }
 
 fa_row <- function(group_name, website, email, meetup_page, twitter, github, slack) {
@@ -204,7 +206,9 @@ fa_rows <- laocrugs %>%
 
 <div class="card">
 <div class="container">
+<table class="tab" cellspacing="0" cellpadding="0">
 `r tagList(fa_rows)`
+</table>
 </div>
 </div>
 <br>
