@@ -87,11 +87,6 @@ d-title {
   padding: 4px 4px;
 }
 
-.tab {
-  border-collapse:collapse;
-  margin: 0;
-}
-
  tr {
     border-collapse: collapse;
     border-spacing: 0;
@@ -103,17 +98,22 @@ a {
     text-decoration-line: none;
 }
 
+fa-row {
+  padding-left: 0;
+}
+
 ul.network-icon{
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   list-style: none;
-  padding: 0;
-  margin-top: 15px
+  padding: 4px 4px;
+  margin-top: 4px;
+  margin-left: 0;
 }
 
 .network-icon li{
-  padding-right:14px; 
+  padding-right:16px; 
 }
 
 .network-icon li:last-of-type{
@@ -129,7 +129,7 @@ ul.network-icon{
 }
 
 .fa-row-name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
-  padding: 2px 24px;
+  padding: 2px 24px 2px 2px;
 }
