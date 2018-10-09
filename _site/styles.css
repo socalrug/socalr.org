@@ -106,7 +106,7 @@ a {
 ul.network-icon{
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin-top: 15px
