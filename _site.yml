@@ -3,6 +3,7 @@ title: "Los Angeles and Orange County R Users"
 description: |
   An Alliance of R Users Groups in LA and OC
 output_dir: "_site"
+favicon: images/favicon.png
 navbar:
   right:
     - text: "Home"
