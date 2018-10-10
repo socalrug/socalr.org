@@ -67,6 +67,12 @@ d-title {
     padding: 2px 16px;
 }
 
+.container-buffer {
+  padding-top: 28px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .card-group {
   color: #4682B4;
   font-family: 'Pacifico', cursive;
@@ -114,6 +120,7 @@ ul.network-icon{
 
 .network-icon li{
   padding-right:16px; 
+  margin-bottom: 6px;
 }
 
 .network-icon li:last-of-type{
