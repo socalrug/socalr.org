@@ -1,21 +1,99 @@
 Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
-Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
-Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
-Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
-Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
-Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
-Rendering website...
-Error: pandoc version 1.12.3 or higher is required and was not found (see the help page ?rmarkdown::pandoc_available).
-Execution halted
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef37f1714dhtml --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef3e122231html --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef2c1921fahtml --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef6f29e5e0html --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef8154b4chtml --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef2137541html --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef84ea2a9html --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cefd0752e4html --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef41baa37fhtml --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef5395116html --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/rmarkdown-str9cef75fa7e07.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef5e27b1e5html --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+  |                                                                         |...................................................              |  78%
+   inline R code fragments
+
+  |                                                                         |..........................................................       |  89%
+label: unnamed-chunk-3
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output events.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef7f6ea697html --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef8a5b90ahtml --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef72f38337html --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef4fbfc368html --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef5c70c590html --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef201d714bhtml --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef35f49701html --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cefc4489a6html --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef21833780html --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef72fff6e1html --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/rmarkdown-str9cef2a968c3.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef1964b1a9html --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   7%
+  ordinary text without R code
+
+  |                                                                         |.........                                                        |  13%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.............                                                    |  20%
+  ordinary text without R code
+
+  |                                                                         |.................                                                |  27%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ warning: logi FALSE
+ $ echo   : logi FALSE
+
+  |                                                                         |......................                                           |  33%
+   inline R code fragments
+
+  |                                                                         |..........................                                       |  40%
+label: unnamed-chunk-2 (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |..............................                                   |  47%
+  ordinary text without R code
+
+  |                                                                         |...................................                              |  53%
+label: unnamed-chunk-3
+  |                                                                         |.......................................                          |  60%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-4
+  |                                                                         |................................................                 |  73%
+   inline R code fragments
+
+  |                                                                         |....................................................             |  80%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ layout: chr "l-body-outset"
+
+  |                                                                         |........................................................         |  87%
+   inline R code fragments
+
+  |                                                                         |.............................................................    |  93%
+label: unnamed-chunk-6 (with options) 
+List of 1
+ $ layout: chr "l-screen-inset"
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef2f2eedchtml --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef5964af1ahtml --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef79e6b6edhtml --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef56ff408dhtml --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef443ba58html --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef56bcfef0html --include-before-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef978ffahtml --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef15d8862html --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef3f008eechtml --include-after-body /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef7e8be041html --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/rmarkdown-str9cef11300c4f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /var/folders/p4/j13kgqyx02gb92cq6jgm3cr00000gn/T//RtmpNWOcqv/file9cef53753619html --include-in-header header.html 
