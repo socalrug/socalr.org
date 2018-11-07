@@ -1,5 +1,5 @@
 ---
-title: "Los Angeles East R Users 🌞"
+title: "Welcome!"
 subtitle: "<br>Talk 1: An Introduction to R Markdown<br><br>Talk 2: A brief introduction to using R for high-performance computing"
 output:
   xaringan::moon_reader:
@@ -18,18 +18,20 @@ options(htmltools.dir.version = FALSE)
 class: center, inverse
 
 # LA and OC R User Groups
-
+<br>
+#[https://laocr.org](https://laocr.org)
+<br>
+## LA East and West R Users/DSLA
 ## R-Ladies Los Angeles
 ## R-Ladies Pasadena
 ## R-Ladies Irvine
 ## Orange County R Users Group
 
 ---
-class: center, inverse
 
-# Upcoming events
+class: inverse
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 library(tidyverse)
 library(htmltools)
 library(here)
@@ -71,6 +73,7 @@ as_card <- function(event_name, group_name, event_time, link, ...) {
 
 ```{r, echo=FALSE}
 cards <- clean_events(events) %>% 
+  filter(group_name != "Los Angeles East R Users Group") %>% 
   pmap(as_card)
 ```
 
@@ -81,19 +84,27 @@ class: center, inverse
 
 # Next Month
 
+<br>
+
 ## Introduction to Text Mining
 ## A case study with Shiny
+
+--
+<br><br><br>
+### Let us know if you want to give a talk!
 
 ---
 
 class: center, middle, inverse
 
-# Thanks!
+# Keep in touch! 
+<br>
 
 ### `r icon::fa("slack")` [bit.ly/laerug](http://bit.ly/laerug)
 ### `r icon::fa("twitter")` [@laeRusers](https://twitter.com/laeRusers)
 ### `r icon::fa("github")` [laeRusers](https://github.com/laeRusers/)
+### `r icon::fa("envelope")` [laerug@gmail.com](mailto:laerug@gmail.com)
 ### `r icon::fa("globe")` [laocr.org](https://lacor.org)
 
-
+<br>
 Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
