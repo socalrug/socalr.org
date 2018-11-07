@@ -1946,3 +1946,14 @@ List of 1
 
 
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmpqA2RO8/fileae8d52868ff2html --include-in-header /tmp/RtmpqA2RO8/fileae8d447e1454html --include-in-header /tmp/RtmpqA2RO8/fileae8d411ff3eahtml --include-in-header /tmp/RtmpqA2RO8/fileae8d797263e9html --include-before-body /tmp/RtmpqA2RO8/fileae8d746a4cfahtml --include-before-body /tmp/RtmpqA2RO8/fileae8d387ffed4html --include-before-body /tmp/RtmpqA2RO8/fileae8d37f2841dhtml --include-after-body /tmp/RtmpqA2RO8/fileae8d5856a3f0html --include-after-body /tmp/RtmpqA2RO8/fileae8dae5f48dhtml --include-after-body /tmp/RtmpqA2RO8/fileae8d6fe15826html --include-in-header /tmp/RtmpqA2RO8/rmarkdown-strae8d3362602c.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpqA2RO8/fileae8dd489976html --include-in-header header.html 
+
+Output created: _site/index.html
+Warning messages:
+1: 'collapse' is deprecated.
+Use 'glue_collapse' instead.
+See help("Deprecated") and help("glue-deprecated"). 
+2: 'collapse' is deprecated.
+Use 'glue_collapse' instead.
+See help("Deprecated") and help("glue-deprecated"). 
+[b8d6ef9] 2018-11-05: update site 2018-11-05 03:00:16
+

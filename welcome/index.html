@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome!</title>
+    <meta charset="utf-8">
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/shinobi.css" rel="stylesheet" />
+    <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cards.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Welcome!
+## <br>Talk 1: An Introduction to R Markdown<br><br>Talk 2: A brief introduction to using R for high-performance computing
+
+---
+
+
+
+
+class: center, inverse
+
+# LA and OC R User Groups
+&lt;br&gt;
+#[https://laocr.org](https://laocr.org)
+&lt;br&gt;
+## LA East and West R Users/DSLA
+## R-Ladies Los Angeles
+## R-Ladies Pasadena
+## R-Ladies Irvine
+## Orange County R Users Group
+
+---
+
+class: inverse
+
+
+
+
+
+<div class="card">
+<a href="https://www.meetup.com/R-Ladies-Pasadena/events/255843008/" class="action_link">
+<div class="container">
+<div class="card-group">R-Ladies Pasadena</div>
+<div class="card-header">R-Ladies Pasadena Meet, Greet, &amp; Learn some Shiny!</div>
+<div class="card-time">Nov 14 at 06:30 PM</div>
+</div>
+</a>
+</div>
+<div class="card">
+<a href="https://www.meetup.com/rladies-irvine/events/255538538/" class="action_link">
+<div class="container">
+<div class="card-group">R-Ladies Irvine</div>
+<div class="card-header">November 2018 Tutorial: R Markdown and Data Visualization with ggplot2</div>
+<div class="card-time">Nov 14 at 06:30 PM</div>
+</div>
+</a>
+</div>
+<div class="card">
+<a href="https://www.meetup.com/OC-RUG/events/256125355/" class="action_link">
+<div class="container">
+<div class="card-group">Orange County R Users Group</div>
+<div class="card-header">Telling Meaningful Stories with Data &amp; Connecting Javascript to Shiny</div>
+<div class="card-time">Nov 27 at 06:30 PM</div>
+</div>
+</a>
+</div>
+<div class="card">
+<a href="https://www.meetup.com/rladies-la/events/255876103/" class="action_link">
+<div class="container">
+<div class="card-group">R-Ladies LA</div>
+<div class="card-header">Code Smells with Jenny Bryan! November R-Ladies meetup</div>
+<div class="card-time">Nov 29 at 06:00 PM</div>
+</div>
+</a>
+</div>
+<div class="card">
+<a href="https://www.meetup.com/OC-RUG/events/256125518/" class="action_link">
+<div class="container">
+<div class="card-group">Orange County R Users Group</div>
+<div class="card-header">OC User Group Holiday Party</div>
+<div class="card-time">Dec 6 at 06:30 PM</div>
+</div>
+</a>
+</div>
+
+---
+class: center, inverse
+
+# Next Month
+
+&lt;br&gt;
+
+## Introduction to Text Mining
+## A case study with Shiny
+
+--
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+### Let us know if you want to give a talk!
+
+---
+
+class: center, middle, inverse
+
+# Keep in touch! 
+&lt;br&gt;
+
+### <i class="fab  fa-slack "></i> [bit.ly/laerug](http://bit.ly/laerug)
+### <i class="fab  fa-twitter "></i> [@laeRusers](https://twitter.com/laeRusers)
+### <i class="fab  fa-github "></i> [laeRusers](https://github.com/laeRusers/)
+### <i class="fas  fa-envelope "></i> [laerug@gmail.com](mailto:laerug@gmail.com)
+### <i class="fas  fa-globe "></i> [laocr.org](https://lacor.org)
+
+&lt;br&gt;
+Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

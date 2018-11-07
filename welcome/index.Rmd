@@ -1,0 +1,110 @@
+---
+title: "Welcome!"
+subtitle: "<br>Talk 1: An Introduction to R Markdown<br><br>Talk 2: A brief introduction to using R for high-performance computing"
+output:
+  xaringan::moon_reader:
+    css: ["default", "shinobi", "ninjutsu", "cards.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, inverse
+
+# LA and OC R User Groups
+<br>
+#[https://laocr.org](https://laocr.org)
+<br>
+## LA East and West R Users/DSLA
+## R-Ladies Los Angeles
+## R-Ladies Pasadena
+## R-Ladies Irvine
+## Orange County R Users Group
+
+---
+
+class: inverse
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(htmltools)
+library(here)
+
+events <- read_rds(here("events.rds"))
+past_events <- read_rds(here("past_events.rds"))
+
+clean_events <- function(events_data, descending = FALSE) {
+  months <- lubridate::month(events_data$time)
+  month_abbs <- month.abb[months]
+  days <- lubridate::day(events_data$time)
+  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
+  events_data$event_time <- paste(month_abbs, days, "at", hours)
+  
+  if (descending) {
+    events_data <- arrange(events_data, desc(time))
+    } else {
+    events_data <- arrange(events_data, time)
+  }
+  
+  events_data %>% 
+    select(event_name = name, group_name, event_time, link)
+}
+
+as_card <- function(event_name, group_name, event_time, link, ...) {
+  tags$div(
+    class = "card",
+    tags$a(href = link,
+      class = "action_link",
+      div(class = "container",
+        tags$div(group_name, class = "card-group"),
+        tags$div(event_name, class = "card-header"),
+        tags$div(event_time, class = "card-time")
+      )
+    )
+  )
+}
+```
+
+```{r, echo=FALSE}
+cards <- clean_events(events) %>% 
+  filter(group_name != "Los Angeles East R Users Group") %>% 
+  pmap(as_card)
+```
+
+`r tagList(cards)`
+
+---
+class: center, inverse
+
+# Next Month
+
+<br>
+
+## Introduction to Text Mining
+## A case study with Shiny
+
+--
+<br><br><br>
+### Let us know if you want to give a talk!
+
+---
+
+class: center, middle, inverse
+
+# Keep in touch! 
+<br>
+
+### `r icon::fa("slack")` [bit.ly/laerug](http://bit.ly/laerug)
+### `r icon::fa("twitter")` [@laeRusers](https://twitter.com/laeRusers)
+### `r icon::fa("github")` [laeRusers](https://github.com/laeRusers/)
+### `r icon::fa("envelope")` [laerug@gmail.com](mailto:laerug@gmail.com)
+### `r icon::fa("globe")` [laocr.org](https://lacor.org)
+
+<br>
+Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
