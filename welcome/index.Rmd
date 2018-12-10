@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: An Introduction to R Markdown<br><br>Talk 2: A brief introduction to using R for high-performance computing"
+subtitle: "<br>Talk 1: Text analysis in R: Special Christmas Edition<br><br>Talk 2: Interactive Dashboards with shiny"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -86,25 +86,40 @@ class: center, inverse
 
 <br>
 
-## Introduction to Text Mining
-## A case study with Shiny
+## Time Series & ARIMA forecasting
+## TBD
 
 --
 <br><br><br>
 ### Let us know if you want to give a talk!
+---
+
+class: center, inverse
+
+# February: 
+
+<br>
+
+## `rstudio::conf() %>% debrief()`
 
 ---
+
+class: center, inverse
+
+# March: 
+
+<br>
+
+## `lightning_talks(time = "5min")`
+
+---
+
 class: center, middle, inverse
 
 <br>
 
 ## Thanks to the Department of Preventive Medicine at USC for supporting and feeding us!
 # 🍕🍕🍕
-
---
-<br>
-## And to Rstudio for the swag!
-# 🛑👕🛑
 
 ---
 
