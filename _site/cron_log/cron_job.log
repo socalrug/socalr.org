@@ -4782,3 +4782,7 @@ List of 1
 
 
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmp6vcIJs/file160e53537a55ehtml --include-in-header /tmp/Rtmp6vcIJs/file160e57de825a1html --include-in-header /tmp/Rtmp6vcIJs/file160e51dae6e20html --include-in-header /tmp/Rtmp6vcIJs/file160e52a26432ehtml --include-before-body /tmp/Rtmp6vcIJs/file160e5554d07ffhtml --include-before-body /tmp/Rtmp6vcIJs/file160e527684878html --include-before-body /tmp/Rtmp6vcIJs/file160e563a4d060html --include-after-body /tmp/Rtmp6vcIJs/file160e5729fb9d8html --include-after-body /tmp/Rtmp6vcIJs/file160e52a45ee9fhtml --include-after-body /tmp/Rtmp6vcIJs/file160e5677151ehtml --include-in-header /tmp/Rtmp6vcIJs/rmarkdown-str160e5740b67e2.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmp6vcIJs/file160e561b3f97ehtml --include-in-header header.html 
+
+Output created: _site/index.html
+[87e5564] 2018-12-10: update site 2018-12-10 03:00:15
+
