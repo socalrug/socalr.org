@@ -140,3 +140,13 @@ ul.network-icon{
   font-weight: 500;
   padding: 2px 24px 2px 2px;
 }
+
+.floatrt {
+  float: right;
+  margin-left: 10px;
+}
+
+.mediumimg {
+  height: 250px;
+  width: 250px;
+}

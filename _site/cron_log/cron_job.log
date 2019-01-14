@@ -7635,3 +7635,10 @@ List of 1
 
 
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmp2gDtpS/filed6ff24dc9b36html --include-in-header /tmp/Rtmp2gDtpS/filed6ff4bd9b931html --include-in-header /tmp/Rtmp2gDtpS/filed6ff46bc325bhtml --include-in-header /tmp/Rtmp2gDtpS/filed6ff3bdb797chtml --include-before-body /tmp/Rtmp2gDtpS/filed6ff3787c9d5html --include-before-body /tmp/Rtmp2gDtpS/filed6ff1eedb80chtml --include-before-body /tmp/Rtmp2gDtpS/filed6ff171bbdd6html --include-after-body /tmp/Rtmp2gDtpS/filed6ff3f7fa9a4html --include-after-body /tmp/Rtmp2gDtpS/filed6ffd67d983html --include-after-body /tmp/Rtmp2gDtpS/filed6fff00d82dhtml --include-in-header /tmp/Rtmp2gDtpS/rmarkdown-strd6ff707a0d.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmp2gDtpS/filed6ff10f82df5html --include-in-header header.html 
+
+Output created: _site/index.html
+Warning message:
+The `printer` argument is soft-deprecated as of rlang 0.3.0.
+This warning is displayed once per session. 
+[94105dd] 2019-01-13: update site 2019-01-13 03:00:14
+
