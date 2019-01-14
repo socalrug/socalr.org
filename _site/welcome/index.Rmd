@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Text analysis in R: Special Christmas Edition<br><br>Talk 2: Interactive Dashboards with shiny"
+subtitle: "<br>Talk 1: Time Series & ARIMA forecasting<br><br>Talk 2: Classification and Statistical Analysis of Cancer Mutations Scores"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -86,8 +86,8 @@ class: center, inverse
 
 <br>
 
-## Time Series & ARIMA forecasting
-## TBD
+## Shiny and Javascript
+## Data in the music industry
 
 --
 <br><br><br>
@@ -96,23 +96,40 @@ class: center, inverse
 
 class: center, inverse
 
-# February: 
+# Updates: 
 
 <br>
 
-## `rstudio::conf() %>% debrief()`
+## Because of requests to give full talks, we've decided to postpone lightning talks
+
+--
+<br>
+
+## We're moving the rstudio::conf() overview to R Ladies Pasadena! 
 
 ---
 
 class: center, inverse
 
-# March: 
+# satRday LA 2019 
 
+.pull-left[
+### SatRday is coming to Los Angeles on April 6th, 2019 at UCLA! 
 <br>
+### Tickets: $35 for professionals and $15 for students
+<br>
+### Submit talks and posters by Feb. 10!
+<br>
+### [https://losangeles2019.satrdays.org](https://losangeles2019.satrdays.org)
+]
 
-## `lightning_talks(time = "5min")`
+.pull-right[
+<img src="satrdays.png">
+]
 
 ---
+
+
 
 class: center, middle, inverse
 

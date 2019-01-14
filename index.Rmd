@@ -117,8 +117,6 @@ cards <- clean_events(events) %>%
 <h1>SatRDay LA 2019</h1>
 </div>
 
-
-
 <img src="satrdays.png" class="floatrt mediumimg">SatRday is coming to Los Angeles on April 6th, 2019 at UCLA! This will be the first SatRday in Southern California and you won't want to miss it. Like all other SatRday events, this will be an one-day affordable conference that focuses on R language and its application. All levels of useRs are welcome. The tickets are $35 for professionals and $15 for students. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>
 
 satRday Los Angeles 2019 is now accepting submissions for session talks, lightning talks, and posters! The deadline is Feb 10, 2018. Submit today at <a href = 'https://sessionize.com/satrday-la-2019'>sessionize</a>.
