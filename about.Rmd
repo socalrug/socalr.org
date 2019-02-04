@@ -10,6 +10,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
+conflicted::conflict_prefer("filter", "dplyr")
+
 laocrugs <- read_csv("laocrugs.csv")
 laocrugs <- laocrugs %>% 
   sample_n(nrow(laocrugs))

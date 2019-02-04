@@ -8760,3 +8760,259 @@ List of 1
 
 
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmp4H7je7/file26eb59ff9b1ehtml --include-in-header /tmp/Rtmp4H7je7/file26eb10d8e68ahtml --include-in-header /tmp/Rtmp4H7je7/file26eb6c557dbchtml --include-in-header /tmp/Rtmp4H7je7/file26eb7831772dhtml --include-before-body /tmp/Rtmp4H7je7/file26eb9fcd38ehtml --include-before-body /tmp/Rtmp4H7je7/file26eb5780aefbhtml --include-before-body /tmp/Rtmp4H7je7/file26eb19300a23html --include-after-body /tmp/Rtmp4H7je7/file26eb129547f7html --include-after-body /tmp/Rtmp4H7je7/file26eb2c7f94ddhtml --include-after-body /tmp/Rtmp4H7je7/file26eb2e928859html --include-in-header /tmp/Rtmp4H7je7/rmarkdown-str26eb1635a2f2.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmp4H7je7/file26eb28b7d004html --include-in-header header.html 
+
+Output created: _site/index.html
+Warning message:
+package 'tibble' was built under R version 3.5.2 
+[2949312] 2019-01-30: update site 2019-01-30 03:00:15
+
+[1] '2.1.3'
+Rendering website...
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmpKqFXHV/file56395f269c73html --include-in-header /tmp/RtmpKqFXHV/file56395791d6c5html --include-in-header /tmp/RtmpKqFXHV/file563956f26082html --include-in-header /tmp/RtmpKqFXHV/file5639aebb283html --include-before-body /tmp/RtmpKqFXHV/file5639619fc6a5html --include-before-body /tmp/RtmpKqFXHV/file5639439d291bhtml --include-before-body /tmp/RtmpKqFXHV/file56391d39e0b6html --include-after-body /tmp/RtmpKqFXHV/file563921391b05html --include-after-body /tmp/RtmpKqFXHV/file5639513cc402html --include-after-body /tmp/RtmpKqFXHV/file56395bd4b0cahtml --include-in-header /tmp/RtmpKqFXHV/rmarkdown-str563968a2ccdf.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpKqFXHV/file5639761ebcbbhtml --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+  |                                                                         |...................................................              |  78%
+   inline R code fragments
+
+  |                                                                         |..........................................................       |  89%
+label: unnamed-chunk-3
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output events.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmpKqFXHV/file563975266f82html --include-in-header /tmp/RtmpKqFXHV/file5639222ab402html --include-in-header /tmp/RtmpKqFXHV/file56396ef2cbf9html --include-in-header /tmp/RtmpKqFXHV/file56392fae7ffehtml --include-before-body /tmp/RtmpKqFXHV/file5639b82722bhtml --include-before-body /tmp/RtmpKqFXHV/file56392bb7041dhtml --include-before-body /tmp/RtmpKqFXHV/file563976a8f65ahtml --include-after-body /tmp/RtmpKqFXHV/file56394ebc48dahtml --include-after-body /tmp/RtmpKqFXHV/file56394de06af0html --include-after-body /tmp/RtmpKqFXHV/file56396b3ca292html --include-in-header /tmp/RtmpKqFXHV/rmarkdown-str563959d5563e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpKqFXHV/file563925faab8dhtml --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   7%
+  ordinary text without R code
+
+  |                                                                         |.........                                                        |  13%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.............                                                    |  20%
+  ordinary text without R code
+
+  |                                                                         |.................                                                |  27%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ warning: logi FALSE
+ $ echo   : logi FALSE
+
+  |                                                                         |......................                                           |  33%
+   inline R code fragments
+
+  |                                                                         |..........................                                       |  40%
+label: unnamed-chunk-2 (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |..............................                                   |  47%
+  ordinary text without R code
+
+  |                                                                         |...................................                              |  53%
+label: unnamed-chunk-3
+  |                                                                         |.......................................                          |  60%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-4
+Error in as.POSIXlt.default(x, tz = tz(x)) : 
+  do not know how to convert 'x' to class "POSIXlt"
+Calls: <Anonymous> ... month.default -> month -> as.POSIXlt -> as.POSIXlt.default
+In addition: Warning messages:
+1: package 'tibble' was built under R version 3.5.2 
+2: Unknown or uninitialised column: 'time'. 
+
+Execution halted
+[1] '2.1.3'
+Rendering website...
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmpf15JUY/file87577f8c884chtml --include-in-header /tmp/Rtmpf15JUY/file8757cf5f7edhtml --include-in-header /tmp/Rtmpf15JUY/file8757586705cdhtml --include-in-header /tmp/Rtmpf15JUY/file87576f90c5c9html --include-before-body /tmp/Rtmpf15JUY/file87576d965f5ahtml --include-before-body /tmp/Rtmpf15JUY/file875728ab53c6html --include-before-body /tmp/Rtmpf15JUY/file875756c7e587html --include-after-body /tmp/Rtmpf15JUY/file875752bbb68ehtml --include-after-body /tmp/Rtmpf15JUY/file87573dcaa760html --include-after-body /tmp/Rtmpf15JUY/file8757564f3007html --include-in-header /tmp/Rtmpf15JUY/rmarkdown-str875768da47d5.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmpf15JUY/file875711c72b17html --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+Error in as.POSIXlt.default(x, tz = tz(x)) : 
+  do not know how to convert 'x' to class "POSIXlt"
+Calls: <Anonymous> ... month.default -> month -> as.POSIXlt -> as.POSIXlt.default
+In addition: Warning messages:
+1: package 'tibble' was built under R version 3.5.2 
+2: Unknown or uninitialised column: 'time'. 
+
+Execution halted
+[1] '2.1.3'
+Rendering website...
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmp4Tl0V7/file2637323e793dhtml --include-in-header /tmp/Rtmp4Tl0V7/file263752435139html --include-in-header /tmp/Rtmp4Tl0V7/file263740fbb4cdhtml --include-in-header /tmp/Rtmp4Tl0V7/file263727b04fchtml --include-before-body /tmp/Rtmp4Tl0V7/file263753a45c93html --include-before-body /tmp/Rtmp4Tl0V7/file263760cd87f8html --include-before-body /tmp/Rtmp4Tl0V7/file263720ffefc3html --include-after-body /tmp/Rtmp4Tl0V7/file2637b5d8e96html --include-after-body /tmp/Rtmp4Tl0V7/file263733eb1f31html --include-after-body /tmp/Rtmp4Tl0V7/file2637497e6395html --include-in-header /tmp/Rtmp4Tl0V7/rmarkdown-str26378bbf0e5.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmp4Tl0V7/file263747758b46html --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+Error in as.POSIXlt.default(x, tz = tz(x)) : 
+  do not know how to convert 'x' to class "POSIXlt"
+Calls: <Anonymous> ... month.default -> month -> as.POSIXlt -> as.POSIXlt.default
+In addition: Warning messages:
+1: package 'tibble' was built under R version 3.5.2 
+2: Unknown or uninitialised column: 'time'. 
+
+Execution halted
+[1] '2.1.3'
+Rendering website...
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmpB7kMPy/file51b64d5d77efhtml --include-in-header /tmp/RtmpB7kMPy/file51b6401b72dbhtml --include-in-header /tmp/RtmpB7kMPy/file51b6771d5ba4html --include-in-header /tmp/RtmpB7kMPy/file51b6db1cf92html --include-before-body /tmp/RtmpB7kMPy/file51b63ee60d24html --include-before-body /tmp/RtmpB7kMPy/file51b676181f35html --include-before-body /tmp/RtmpB7kMPy/file51b657889d4ahtml --include-after-body /tmp/RtmpB7kMPy/file51b66e851d36html --include-after-body /tmp/RtmpB7kMPy/file51b61392783dhtml --include-after-body /tmp/RtmpB7kMPy/file51b671c5a377html --include-in-header /tmp/RtmpB7kMPy/rmarkdown-str51b6666f13fb.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpB7kMPy/file51b62b67dfe1html --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+Error in as.POSIXlt.default(x, tz = tz(x)) : 
+  do not know how to convert 'x' to class "POSIXlt"
+Calls: <Anonymous> ... month.default -> month -> as.POSIXlt -> as.POSIXlt.default
+In addition: Warning messages:
+1: package 'tibble' was built under R version 3.5.2 
+2: Unknown or uninitialised column: 'time'. 
+
+Execution halted
+[1] '2.1.3'
+Rendering website...
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmpuMaJp7/file81104b20e336html --include-in-header /tmp/RtmpuMaJp7/file811076a9b3fahtml --include-in-header /tmp/RtmpuMaJp7/file81102be759a7html --include-in-header /tmp/RtmpuMaJp7/file81107ee4b5d7html --include-before-body /tmp/RtmpuMaJp7/file8110369d35f7html --include-before-body /tmp/RtmpuMaJp7/file81104859f95bhtml --include-before-body /tmp/RtmpuMaJp7/file81105e85cf7dhtml --include-after-body /tmp/RtmpuMaJp7/file81109bdb86html --include-after-body /tmp/RtmpuMaJp7/file811068dae0e0html --include-after-body /tmp/RtmpuMaJp7/file811064eae21ehtml --include-in-header /tmp/RtmpuMaJp7/rmarkdown-str811078a35354.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpuMaJp7/file81106aa1ad1chtml --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+Error in as.POSIXlt.default(x, tz = tz(x)) : 
+  do not know how to convert 'x' to class "POSIXlt"
+Calls: <Anonymous> ... month.default -> month -> as.POSIXlt -> as.POSIXlt.default
+In addition: Warning messages:
+1: package 'tibble' was built under R version 3.5.2 
+2: Unknown or uninitialised column: 'time'. 
+
+Execution halted
