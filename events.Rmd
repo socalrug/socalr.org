@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r}
 library(tidyverse)
 library(htmltools)
+conflicted::conflict_prefer("filter", "dplyr")
 
 events <- read_rds("events.rds")
 past_events <- read_rds("past_events.rds")

@@ -19,6 +19,7 @@ options(knitr.kable.NA = "--")
 ```{r, warning=FALSE, echo=FALSE}
 library(tidyverse)
 library(googledrive)
+conflicted::conflict_prefer("filter", "dplyr")
 drive_download("laocrugs", type = "csv", overwrite = TRUE)
 laocrugs <- read_csv("laocrugs.csv")
 laocrugs <- laocrugs %>% 
