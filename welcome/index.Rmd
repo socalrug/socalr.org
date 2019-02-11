@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Time Series & ARIMA forecasting<br><br>Talk 2: Classification and Statistical Analysis of Cancer Mutations Scores"
+subtitle: "<br>Talk 1: Working with data in the music business<br><br>Talk 2: Javascript for the useR"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -13,6 +13,7 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
 class: center, inverse
@@ -86,27 +87,12 @@ class: center, inverse
 
 <br>
 
-## Shiny and Javascript
-## Data in the music industry
+## Spatial Analysis and Viz
+## purrr
 
 --
 <br><br><br>
 ### Let us know if you want to give a talk!
----
-
-class: center, inverse
-
-# Updates: 
-
-<br>
-
-## Because of requests to give full talks, we've decided to postpone lightning talks
-
---
-<br>
-
-## We're moving the rstudio::conf() overview to R Ladies Pasadena! 
-
 ---
 
 class: center, inverse
@@ -118,8 +104,6 @@ class: center, inverse
 <br>
 ### Tickets: $35 for professionals and $15 for students
 <br>
-### Submit talks and posters by Feb. 10!
-<br>
 ### [https://losangeles2019.satrdays.org](https://losangeles2019.satrdays.org)
 ]
 
@@ -128,8 +112,6 @@ class: center, inverse
 ]
 
 ---
-
-
 
 class: center, middle, inverse
 
