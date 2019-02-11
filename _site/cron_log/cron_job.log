@@ -9752,3 +9752,9 @@ List of 1
 
 
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmpTkRX5n/file3e13706f9f97html --include-in-header /tmp/RtmpTkRX5n/file3e135532042html --include-in-header /tmp/RtmpTkRX5n/file3e1357bdca1bhtml --include-in-header /tmp/RtmpTkRX5n/file3e133f43b44ahtml --include-before-body /tmp/RtmpTkRX5n/file3e136e391a2bhtml --include-before-body /tmp/RtmpTkRX5n/file3e137402108ehtml --include-before-body /tmp/RtmpTkRX5n/file3e1326097464html --include-after-body /tmp/RtmpTkRX5n/file3e13687084f0html --include-after-body /tmp/RtmpTkRX5n/file3e13772c310ahtml --include-after-body /tmp/RtmpTkRX5n/file3e13464719adhtml --include-in-header /tmp/RtmpTkRX5n/rmarkdown-str3e1365e6d0e6.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmpTkRX5n/file3e13566af13chtml --include-in-header header.html 
+
+Output created: _site/index.html
+Warning message:
+package 'tibble' was built under R version 3.5.2 
+[1f4f0a6] 2019-02-11: update site 2019-02-11 03:00:16
+
