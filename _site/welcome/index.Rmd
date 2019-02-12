@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Working with data in the music business<br><br>Talk 2: Javascript for the useR"
+subtitle: "<br>Talk 1: Working with data in the music business<br><br>Talk 2: What I learned at rstudio::conf as a first-time attendee"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
