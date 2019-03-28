@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Working with data in the music business<br><br>Talk 2: What I learned at rstudio::conf as a first-time attendee"
+subtitle: "<br>Talk 1: Functional programming with purrr<br><br>Talk 2: JavaScript for the R Programmer"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -80,15 +80,6 @@ cards <- clean_events(events) %>%
 
 `r tagList(cards)`
 
----
-class: center, inverse
-
-# Next Month
-
-<br>
-
-## Spatial Analysis and Viz
-## purrr
 
 --
 <br><br><br>
@@ -106,6 +97,8 @@ class: center, inverse
 <br>
 ### [https://losangeles2019.satrdays.org](https://losangeles2019.satrdays.org)
 ]
+
+Giveways for two free tickets to satRday!
 
 .pull-right[
 <img src="satrdays.png">
