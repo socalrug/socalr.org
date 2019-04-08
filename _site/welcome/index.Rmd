@@ -115,6 +115,11 @@ class: center, middle, inverse
 ## Thanks to the Department of Preventive Medicine at USC for supporting and feeding us!
 # 🍕🍕🍕
 
+--
+
+## And to Ryan Wilkerson for video & IT support!
+# 🎥🖥🙏🙏🙏
+
 ---
 
 class: center, middle, inverse
