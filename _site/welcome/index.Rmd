@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Functional programming with purrr<br><br>Talk 2: JavaScript for the R Programmer"
+subtitle: "<br>Talk 1: Data Visualization from Start to Finish<br><br>Talk 2: Bayesian Modeling with R2jags"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -86,19 +86,21 @@ cards <- clean_events(events) %>%
 ### Let us know if you want to give a talk!
 ---
 
-class: center, inverse
+class: inverse
 
 # satRday LA 2019 
 
 .pull-left[
-### SatRday is coming to Los Angeles on April 6th, 2019 at UCLA! 
 <br>
-### Tickets: $35 for professionals and $15 for students
+### SatRday LA was April 6th, 2019 at UCLA
 <br>
-### [https://losangeles2019.satrdays.org](https://losangeles2019.satrdays.org)
+### Sold out & 180 (!) people went. If you went, fill out the survey!
+<br>
+### Slides: [https://github.com/satRdays/losangeles/](https://github.com/satRdays/losangeles/)
+<br>
+### Video to come
+<br>
 ]
-
-Giveways for two free tickets to satRday!
 
 .pull-right[
 <img src="satrdays.png">

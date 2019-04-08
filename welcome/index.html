@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>Welcome!</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/shinobi.css" rel="stylesheet" />
     <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
 class: center, middle, inverse, title-slide
 
 # Welcome!
-## <br>Talk 1: Functional programming with purrr<br><br>Talk 2: JavaScript for the R Programmer
+## <br>Talk 1: Data Visualization from Start to Finish<br><br>Talk 2: Bayesian Modeling with R2jags
 
 ---
 
@@ -42,20 +42,11 @@ class: inverse
 
 
 <div class="card">
-<a href="https://www.meetup.com/rladies-irvine/events/258783583/" class="action_link">
+<a href="https://www.meetup.com/rladies-irvine/events/259242041/" class="action_link">
 <div class="container">
 <div class="card-group">R-Ladies Irvine</div>
-<div class="card-header">Pi Day + The Growth of R in the Actuarial Profession</div>
-<div class="card-time">Mar 14 at 06:30 PM</div>
-</div>
-</a>
-</div>
-<div class="card">
-<a href="https://www.meetup.com/OC-RUG/events/259113628/" class="action_link">
-<div class="container">
-<div class="card-group">Orange County R Users Group</div>
-<div class="card-header">Deep Learning using R  and Unit Testing Your Code</div>
-<div class="card-time">Mar 26 at 06:30 PM</div>
+<div class="card-header">The Ethics of Data Science (Interactive R Workshop)</div>
+<div class="card-time">Apr 11 at 06:30 PM</div>
 </div>
 </a>
 </div>
@@ -63,8 +54,17 @@ class: inverse
 <a href="https://www.meetup.com/OC-RUG/events/259495579/" class="action_link">
 <div class="container">
 <div class="card-group">Orange County R Users Group</div>
-<div class="card-header">Deep Learning using R and NASA Datanauts</div>
-<div class="card-time">Apr 30 at 06:30 PM</div>
+<div class="card-header">Deep Learning using R, REST APIs and Shiny</div>
+<div class="card-time">Apr 29 at 06:30 PM</div>
+</div>
+</a>
+</div>
+<div class="card">
+<a href="https://www.meetup.com/OC-RUG/events/260138920/" class="action_link">
+<div class="container">
+<div class="card-group">Orange County R Users Group</div>
+<div class="card-header">Data Science Hackathon - **Signup on Eventbrite not Meetup**</div>
+<div class="card-time">May 18 at 09:00 AM</div>
 </div>
 </a>
 </div>
@@ -75,19 +75,21 @@ class: inverse
 ### Let us know if you want to give a talk!
 ---
 
-class: center, inverse
+class: inverse
 
 # satRday LA 2019 
 
 .pull-left[
-### SatRday is coming to Los Angeles on April 6th, 2019 at UCLA! 
 &lt;br&gt;
-### Tickets: $35 for professionals and $15 for students
+### SatRday LA was April 6th, 2019 at UCLA
 &lt;br&gt;
-### [https://losangeles2019.satrdays.org](https://losangeles2019.satrdays.org)
+### Sold out &amp; 180 (!) people went. If you went, fill out the survey!
+&lt;br&gt;
+### Slides: [https://github.com/satRdays/losangeles/](https://github.com/satRdays/losangeles/)
+&lt;br&gt;
+### Video to come
+&lt;br&gt;
 ]
-
-Giveways for two free tickets to satRday!
 
 .pull-right[
 &lt;img src="satrdays.png"&gt;
@@ -118,6 +120,7 @@ class: center, middle, inverse
 &lt;br&gt;
 Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -127,16 +130,57 @@ Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
 
 <script>
 (function() {
-  var i, text, code, codes = document.getElementsByTagName('code');
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
   for (i = 0; i < codes.length;) {
     code = codes[i];
     if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
@@ -150,7 +194,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     i++;
   }
-})();
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
