@@ -13702,3 +13702,106 @@ List of 1
 
 
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/RtmphLoi4F/file44f81addee95html --include-in-header /tmp/RtmphLoi4F/file44f87b244b03html --include-in-header /tmp/RtmphLoi4F/file44f8633b58cfhtml --include-in-header /tmp/RtmphLoi4F/file44f863ed42ebhtml --include-before-body /tmp/RtmphLoi4F/file44f85e91f389html --include-before-body /tmp/RtmphLoi4F/file44f877bba626html --include-before-body /tmp/RtmphLoi4F/file44f87153eac9html --include-after-body /tmp/RtmphLoi4F/file44f87d319f7ahtml --include-after-body /tmp/RtmphLoi4F/file44f815050407html --include-after-body /tmp/RtmphLoi4F/file44f82799fe10html --include-in-header /tmp/RtmphLoi4F/rmarkdown-str44f86ef6e0bf.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/RtmphLoi4F/file44f8aa63944html --include-in-header header.html 
+
+Output created: _site/index.html
+[4cd9fd1] 2019-04-07: update site 2019-04-07 03:00:13
+[1] '2.1.3'
+Rendering website...
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output about.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmpa2A4lJ/file13b344d4dddfhtml --include-in-header /tmp/Rtmpa2A4lJ/file13b361ff9e90html --include-in-header /tmp/Rtmpa2A4lJ/file13b34bed51b6html --include-in-header /tmp/Rtmpa2A4lJ/file13b331897c61html --include-before-body /tmp/Rtmpa2A4lJ/file13b34be0ccf6html --include-before-body /tmp/Rtmpa2A4lJ/file13b35872801ahtml --include-before-body /tmp/Rtmpa2A4lJ/file13b37c8ad940html --include-after-body /tmp/Rtmpa2A4lJ/file13b368400e1html --include-after-body /tmp/Rtmpa2A4lJ/file13b33c3f44e7html --include-after-body /tmp/Rtmpa2A4lJ/file13b32910450html --include-in-header /tmp/Rtmpa2A4lJ/rmarkdown-str13b37eb22180.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmpa2A4lJ/file13b365bbcc62html --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
+  ordinary text without R code
+
+  |                                                                         |..............                                                   |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |.............................                                    |  44%
+label: unnamed-chunk-1
+  |                                                                         |....................................                             |  56%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+  |                                                                         |...................................................              |  78%
+   inline R code fragments
+
+  |                                                                         |..........................................................       |  89%
+label: unnamed-chunk-3
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output events.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmpa2A4lJ/file13b31f4f6899html --include-in-header /tmp/Rtmpa2A4lJ/file13b37f362809html --include-in-header /tmp/Rtmpa2A4lJ/file13b3219df1f3html --include-in-header /tmp/Rtmpa2A4lJ/file13b34b8d0da6html --include-before-body /tmp/Rtmpa2A4lJ/file13b3a7c4da2html --include-before-body /tmp/Rtmpa2A4lJ/file13b32e40ec6bhtml --include-before-body /tmp/Rtmpa2A4lJ/file13b317505b4bhtml --include-after-body /tmp/Rtmpa2A4lJ/file13b334ae7f69html --include-after-body /tmp/Rtmpa2A4lJ/file13b3162042ehtml --include-after-body /tmp/Rtmpa2A4lJ/file13b3336f362chtml --include-in-header /tmp/Rtmpa2A4lJ/rmarkdown-str13b34a4d9d15.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmpa2A4lJ/file13b337c17eahtml --include-in-header header.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   7%
+  ordinary text without R code
+
+  |                                                                         |.........                                                        |  13%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.............                                                    |  20%
+  ordinary text without R code
+
+  |                                                                         |.................                                                |  27%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ warning: logi FALSE
+ $ echo   : logi FALSE
+
+  |                                                                         |......................                                           |  33%
+   inline R code fragments
+
+  |                                                                         |..........................                                       |  40%
+label: unnamed-chunk-2 (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |..............................                                   |  47%
+  ordinary text without R code
+
+  |                                                                         |...................................                              |  53%
+label: unnamed-chunk-3
+  |                                                                         |.......................................                          |  60%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-4
+  |                                                                         |................................................                 |  73%
+   inline R code fragments
+
+  |                                                                         |....................................................             |  80%
+label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo  : logi FALSE
+ $ layout: chr "l-body-outset"
+
+  |                                                                         |........................................................         |  87%
+   inline R code fragments
+
+  |                                                                         |.............................................................    |  93%
+label: unnamed-chunk-6 (with options) 
+List of 1
+ $ layout: chr "l-screen-inset"
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html5 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --email-obfuscation none --standalone --no-highlight --template /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/default.html --lua-filter /Library/Frameworks/R.framework/Versions/3.5/Resources/library/radix/rmarkdown/templates/radix_article/resources/distill.lua '--metadata=link-citations:true' --css styles.css --include-in-header /tmp/Rtmpa2A4lJ/file13b379968edahtml --include-in-header /tmp/Rtmpa2A4lJ/file13b347b68ee2html --include-in-header /tmp/Rtmpa2A4lJ/file13b3724ef35ehtml --include-in-header /tmp/Rtmpa2A4lJ/file13b37f00b070html --include-before-body /tmp/Rtmpa2A4lJ/file13b31e2791c1html --include-before-body /tmp/Rtmpa2A4lJ/file13b34d382b34html --include-before-body /tmp/Rtmpa2A4lJ/file13b34e287e0fhtml --include-after-body /tmp/Rtmpa2A4lJ/file13b36ccc74b1html --include-after-body /tmp/Rtmpa2A4lJ/file13b334724cc8html --include-after-body /tmp/Rtmpa2A4lJ/file13b327cff237html --include-in-header /tmp/Rtmpa2A4lJ/rmarkdown-str13b345270d4c.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-in-header /tmp/Rtmpa2A4lJ/file13b3109dda9chtml --include-in-header header.html 
