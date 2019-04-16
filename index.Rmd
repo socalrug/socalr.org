@@ -118,11 +118,13 @@ cards <- clean_events(events) %>%
 <h1>SatRDay LA 2019</h1>
 </div>
 
-<img src="satrdays.png" class="floatrt mediumimg">SatRday is coming to Los Angeles on April 6th, 2019 at UCLA! This will be the first SatRday in Southern California and you won't want to miss it. Like all other SatRday events, this will be an one-day affordable conference that focuses on R language and its application. All levels of useRs are welcome. The tickets are $35 for professionals and $15 for students. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>
+<img src="satrdays.png" class="floatrt mediumimg">The first SatRday in Southern California Los Angeles was held on April 6th, 2019 at UCLA! satRday LA was a huge success: tickets sold out and over 180 R users attended. Slides from the event can be found on the <a href = 'https://github.com/satRdays/losangeles/tree/master/2019'>satRday GitHub page</a>, and videos are soon too come. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>. 
+We look forward to seeing you next year at satRday LA 2020!
 
-satRday Los Angeles 2019 is now accepting submissions for session talks, lightning talks, and posters! The deadline is Feb 10, 2018. Submit today at <a href = 'https://sessionize.com/satrday-la-2019'>sessionize</a>.
-
-`r as_card("A conference for users of the R Language", "satRday Los Angeles 2019", "April 6, 2019 @ UCLA James West Alumni Center", "https://losangeles2019.satrdays.org/")`
+<!-- For future use: A submission request -->
+<!-- satRday Los Angeles 2019 is now accepting submissions for session talks, lightning talks, and posters! The deadline is Feb 10, 2018. Submit today at <a href = 'https://sessionize.com/satrday-la-2019'>sessionize</a>. -->
+<!-- For future use: an event card for satRday -->
+<!-- `r as_card("A conference for users of the R Language", "satRday Los Angeles 2019", "April 6, 2019 @ UCLA James West Alumni Center", "https://losangeles2019.satrdays.org/")` -->
 
 <div class="headers">
 <h1>Organizations</h1>
