@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Data Visualization from Start to Finish<br><br>Talk 2: Bayesian Modeling with R2jags"
+subtitle: "<br>Talk 1: Regression Estimation for Competing Risks<br><br>Talk 2: Patient Enrollment Monitoring System with shinydashboard/flexdashboard"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -80,31 +80,22 @@ cards <- clean_events(events) %>%
 
 `r tagList(cards)`
 
-
---
-<br><br><br>
-### Let us know if you want to give a talk!
 ---
 
-class: inverse
+class: center, middle, inverse
 
-# satRday LA 2019 
+# Next Month
 
-.pull-left[
 <br>
-### SatRday LA was April 6th, 2019 at UCLA
-<br>
-### Sold out & 180 (!) people went. If you went, fill out the survey!
-<br>
-### Slides: [https://github.com/satRdays/losangeles/](https://github.com/satRdays/losangeles/)
-<br>
-### Video to come
-<br>
-]
 
-.pull-right[
-<img src="satrdays.png">
-]
+## Bioconductor
+## Unit Testing
+
+
+--
+
+<br><br><br>
+### Let us know if you want to give a talk!
 
 ---
 
@@ -117,7 +108,7 @@ class: center, middle, inverse
 
 --
 
-## And to Ryan Wilkerson for video & IT support!
+## And to Ryan for video & IT support!
 # 🎥🖥🙏🙏🙏
 
 ---
