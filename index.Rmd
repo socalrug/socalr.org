@@ -49,16 +49,36 @@ events <- map2(laocrugs_meetups$meetup_page,
                laocrugs_meetups$group_name,
                pull_events) %>% 
   map(pluck(1)) %>% 
-  bind_rows()
+  bind_rows() %>% 
+  mutate(
+    group_name = dplyr::case_when(
+      grepl("LA West", name) ~ "LA West R Users",
+      grepl("LA East", name) ~ "LA East R Users",
+      TRUE ~ group_name
+    )
+  )
 
-past_laocrugs_meetups <- laocrugs %>% 
-  filter(group_name != "Los Angeles East R Users Group")
+  
+events <- events
+# 
+# past_laocrugs_meetups <- laocrugs %>% 
+#   filter(group_name != "Los Angeles East R Users Group")
 
-past_events <- map2(past_laocrugs_meetups$meetup_page, 
-               past_laocrugs_meetups$group_name,
-               pull_events, event_status = "past") %>% 
+past_events <- map2(
+  past_laocrugs_meetups$meetup_page, 
+  past_laocrugs_meetups$group_name,
+  pull_events, 
+  event_status = "past"
+) %>% 
   map(pluck(1)) %>% 
-  bind_rows()
+  bind_rows() %>% 
+  mutate(
+    group_name = dplyr::case_when(
+      grepl("LA West", name) ~ "Los Angeles West R Users",
+      grepl("LA East", name) ~ "Los Angeles East R Users",
+      TRUE ~ group_name
+    )
+  )
 
 past_events <- past_events %>% 
   group_by(group_name) %>% 
@@ -239,6 +259,8 @@ icons <- awesomeIcons(
 )
 
 bind_cols(laocrugs, addresses) %>% 
+  filter(group_name != "Los Angeles West R Users") %>% 
+  mutate(group_name = ifelse(group_name == "Data Science LA", "Data Science LA/LA West R Users Group", group_name)) %>% 
   leaflet() %>%
   addProviderTiles(providers$CartoDB.Positron) %>% 
   addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon=icons)

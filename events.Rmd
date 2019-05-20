@@ -35,6 +35,7 @@ clean_events <- function(events_data, descending = FALSE) {
     } else {
     events_data <- arrange(events_data, time)
   }
+
   
   events_data %>% 
     select(event_name = name, group_name, event_time, link)

@@ -1,6 +1,7 @@
 group_name,meetup_page,email,address,website,twitter,github,slack,notes
 Los Angeles East R Users Group,Los-Angeles-R-Users-Group-Data-Science,laerug@gmail.com,"2001 N. Soto St., Los Angeles, 90032",,laeRusers,laeRusers,laerug,Meets the second Monday of the month
-Data Science LA/LA West R Users Group,Los-Angeles-R-Users-Group-Data-Science,info@datascience.la,"Santa Monica, CA",http://datascience.la/,wwwDSLA,,,
+Los Angeles West R Users Group,Los-Angeles-R-Users-Group-Data-Science,laerug@gmail.com,"Santa Monica, CA",,la_Rusers,la_Rusers,laerug,
+Data Science LA,Los-Angeles-R-Users-Group-Data-Science,info@datascience.la,"Santa Monica, CA",http://datascience.la/,wwwDSLA,,,
 R-Ladies LA,rladies-la,katie@rladies.org,"UCLA, Los Angeles, CA",http://www.r-ladies.com/,RLadiesLA,,,
 R-Ladies Irvine,rladies-irvine,alyssa@rladies.org,"UC Irvine, Irvine, CA, 92618",http://www.r-ladies.com/,RLadiesIrvine,rladies-irvine,rladies-irvine,
 R-Ladies Pasadena,R-Ladies-Pasadena,,"California Institute of Technology, Pasadena, CA 91125",http://www.r-ladies.com/,,,,
