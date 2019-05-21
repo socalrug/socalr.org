@@ -43,7 +43,7 @@ pull_events <- function(.meetup_page, .group_name, ...) {
 }
 
 laocrugs_meetups <- laocrugs %>% 
-  filter(group_name != "Data Science LA/LA West R Users Group")
+  filter(group_name != "Data Science LA", group_name != "Los Angeles West R Users Group")
 
 events <- map2(laocrugs_meetups$meetup_page, 
                laocrugs_meetups$group_name,
@@ -52,8 +52,8 @@ events <- map2(laocrugs_meetups$meetup_page,
   bind_rows() %>% 
   mutate(
     group_name = dplyr::case_when(
-      grepl("LA West", name) ~ "LA West R Users",
-      grepl("LA East", name) ~ "LA East R Users",
+      grepl("LA West", name) ~ "Los Angeles West R Users",
+      grepl("LA East", name) ~ "Los Angeles East R Users",
       TRUE ~ group_name
     )
   )
