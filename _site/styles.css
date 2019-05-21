@@ -2,33 +2,33 @@ body {
     background-color: #F5F5F5; 
 }
 
-.radix-site-nav {
+.distill-site-nav {
   color: rgba(0, 0, 0, 0.7);
   background-color: #F5F5F5;
   font-size: 15px;
   font-weight: 500;
 }
 
-.radix-site-nav a {
+.distill-site-nav a {
   color: inherit;
   text-decoration: none;
 }
 
-.radix-site-nav a:hover {
+.distill-site-nav a:hover {
   color: black;
 }
 
-.radix-site-header {
+.distill-site-header {
 }
 
-.radix-site-footer {
+.distill-site-footer {
   font-size: 10px;
   margin: 0 0;
   padding: 0 0;
 }
 
 @media print {
-  .radix-site-nav {
+  .distill-site-nav {
     display: none;
   }
 }

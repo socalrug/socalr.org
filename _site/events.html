@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-  <meta name="generator" content="radix" />
+  <meta name="generator" content="distill" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -39,7 +39,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Los Angeles and Orange County R Users"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["radix::radix_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["includes","css"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["header.html"]}]},{"type":"character","attributes":{},"value":["styles.css"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Los Angeles and Orange County R Users"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["includes","css"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["header.html"]}]},{"type":"character","attributes":{},"value":["styles.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -73,7 +73,7 @@
       });
   
       // responsive menu
-      $('.radix-site-header').each(function(i, val) {
+      $('.distill-site-header').each(function(i, val) {
         var topnav = $(this);
         var toggle = topnav.find('.nav-toggle');
         toggle.on('click', function() {
@@ -100,85 +100,85 @@
   
   /* Theme (user-documented overrideables for nav appearance) */
   
-  .radix-site-nav {
+  .distill-site-nav {
     color: rgba(255, 255, 255, 0.8);
     background-color: #455a64;
     font-size: 15px;
     font-weight: 300;
   }
   
-  .radix-site-nav a {
+  .distill-site-nav a {
     color: inherit;
     text-decoration: none;
   }
   
-  .radix-site-nav a:hover {
+  .distill-site-nav a:hover {
     color: white;
   }
   
   @media print {
-    .radix-site-nav {
+    .distill-site-nav {
       display: none;
     }
   }
   
-  .radix-site-header {
+  .distill-site-header {
   
   }
   
-  .radix-site-footer {
+  .distill-site-footer {
   
   }
   
   
   /* Site Header */
   
-  .radix-site-header {
+  .distill-site-header {
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
   }
   
-  .radix-site-header .nav-left {
+  .distill-site-header .nav-left {
     display: inline-block;
     margin-left: 8px;
   }
   
   @media screen and (max-width: 768px) {
-    .radix-site-header .nav-left {
+    .distill-site-header .nav-left {
       margin-left: 0;
     }
   }
   
   
-  .radix-site-header .nav-right {
+  .distill-site-header .nav-right {
     float: right;
     margin-right: 8px;
   }
   
-  .radix-site-header a,
-  .radix-site-header .title {
+  .distill-site-header a,
+  .distill-site-header .title {
     display: inline-block;
     text-align: center;
     padding: 14px 10px 14px 10px;
   }
   
-  .radix-site-header .title {
+  .distill-site-header .title {
     font-size: 18px;
   }
   
-  .radix-site-header .logo {
+  .distill-site-header .logo {
     padding: 0;
   }
   
-  .radix-site-header .logo img {
+  .distill-site-header .logo img {
     display: none;
     max-height: 20px;
     width: auto;
     margin-bottom: -4px;
   }
   
-  .radix-site-header .nav-image img {
+  .distill-site-header .nav-image img {
     max-height: 18px;
     width: auto;
     display: inline-block;
@@ -188,22 +188,22 @@
   
   
   @media screen and (min-width: 1000px) {
-    .radix-site-header .logo img {
+    .distill-site-header .logo img {
       display: inline-block;
     }
-    .radix-site-header .nav-left {
+    .distill-site-header .nav-left {
       margin-left: 20px;
     }
-    .radix-site-header .nav-right {
+    .distill-site-header .nav-right {
       margin-right: 20px;
     }
-    .radix-site-header .title {
+    .distill-site-header .title {
       padding-left: 12px;
     }
   }
   
   
-  .radix-site-header .nav-toggle {
+  .distill-site-header .nav-toggle {
     display: none;
   }
   
@@ -285,18 +285,18 @@
   }
   
   @media screen and (max-width: 768px) {
-    .radix-site-header a, .radix-site-header .nav-dropdown  {display: none;}
-    .radix-site-header a.nav-toggle {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
       float: right;
       display: block;
     }
-    .radix-site-header .title {
+    .distill-site-header .title {
       margin-left: 0;
     }
-    .radix-site-header .nav-right {
+    .distill-site-header .nav-right {
       margin-right: 0;
     }
-    .radix-site-header {
+    .distill-site-header {
       overflow: hidden;
     }
     .nav-right .nav-dropdown-content {
@@ -306,24 +306,24 @@
   
   
   @media screen and (max-width: 768px) {
-    .radix-site-header.responsive {position: relative;}
-    .radix-site-header.responsive a.nav-toggle {
+    .distill-site-header.responsive {position: relative;}
+    .distill-site-header.responsive a.nav-toggle {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .radix-site-header.responsive a,
-    .radix-site-header.responsive .nav-dropdown {
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
       display: block;
       text-align: left;
     }
-    .radix-site-header.responsive .nav-left,
-    .radix-site-header.responsive .nav-right {
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
       width: 100%;
     }
-    .radix-site-header.responsive .nav-dropdown {float: none;}
-    .radix-site-header.responsive .nav-dropdown-content {position: relative;}
-    .radix-site-header.responsive .nav-dropdown .nav-dropbtn {
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
       display: block;
       width: 100%;
       text-align: left;
@@ -332,7 +332,7 @@
   
   /* Site Footer */
   
-  .radix-site-footer {
+  .distill-site-footer {
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
@@ -1215,7 +1215,7 @@
   
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
-      $('.radix-site-header a[href]').each(function(i,val) {
+      $('.distill-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
       });
     }
@@ -1279,7 +1279,7 @@
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
 <header class="header header--fixed" role="banner">
-<nav class="radix-site-nav radix-site-header">
+<nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Los Angeles and Orange County R Users</a>
 </div>
@@ -1314,20 +1314,11 @@ All Upcoming Events
 
 </div>
 <div class="card">
-<a href="https://www.meetup.com/rladies-irvine/events/260603442/" class="action_link">
+<a href="https://www.meetup.com/Los-Angeles-R-Users-Group-Data-Science/events/261625737/" class="action_link">
 <div class="container">
-<div class="card-group">R-Ladies Irvine</div>
-<div class="card-header">OCRUG/R-Ladies Irvine/OCLB ASA Chapter/IEEE OC CS DataFest Celebration</div>
-<div class="card-time">May 20 at 06:30 PM</div>
-</div>
-</a>
-</div>
-<div class="card">
-<a href="https://www.meetup.com/OC-RUG/events/261502097/" class="action_link">
-<div class="container">
-<div class="card-group">Orange County R Users Group</div>
-<div class="card-header">OCRUG/R-Ladies Irvine/OCLB ASA Chapter/IEEE OC CS DataFest Celebration</div>
-<div class="card-time">May 20 at 06:30 PM</div>
+<div class="card-group">Los Angeles West R Users</div>
+<div class="card-header">LA West R Users: Better than DL: Gradient Boosting Machine (GBM) w/ 2019 updates</div>
+<div class="card-time">May 28 at 06:30 PM</div>
 </div>
 </a>
 </div>
@@ -1365,6 +1356,24 @@ Recent Events
 </div>
 <div class="layout-chunk" data-layout="l-body">
 
+</div>
+<div class="card">
+<a href="https://www.meetup.com/OC-RUG/events/261502097/" class="action_link">
+<div class="container">
+<div class="card-group">Orange County R Users Group</div>
+<div class="card-header">OCRUG/R-Ladies Irvine/OCLB ASA Chapter/IEEE OC CS DataFest Celebration</div>
+<div class="card-time">May 20 at 06:30 PM</div>
+</div>
+</a>
+</div>
+<div class="card">
+<a href="https://www.meetup.com/rladies-irvine/events/260603442/" class="action_link">
+<div class="container">
+<div class="card-group">R-Ladies Irvine</div>
+<div class="card-header">OCRUG/R-Ladies Irvine/OCLB ASA Chapter/IEEE OC CS DataFest Celebration</div>
+<div class="card-time">May 20 at 06:30 PM</div>
+</div>
+</a>
 </div>
 <div class="card">
 <a href="https://www.meetup.com/OC-RUG/events/260138920/" class="action_link">
@@ -1408,15 +1417,6 @@ Recent Events
 <div class="card-group">Los Angeles East R Users</div>
 <div class="card-header">LA East R Users: Data Viz from Start to Finish and Bayesian Modeling with R2jags</div>
 <div class="card-time">Apr 8 at 07:00 PM</div>
-</div>
-</a>
-</div>
-<div class="card">
-<a href="https://www.meetup.com/OC-RUG/events/259113628/" class="action_link">
-<div class="container">
-<div class="card-group">Orange County R Users Group</div>
-<div class="card-header">Deep Learning using R  and Unit Testing Your Code</div>
-<div class="card-time">Mar 26 at 06:30 PM</div>
 </div>
 </a>
 </div>
@@ -1493,15 +1493,6 @@ Recent Events
 </a>
 </div>
 <div class="card">
-<a href="https://www.meetup.com/rladies-irvine/events/255538538/" class="action_link">
-<div class="container">
-<div class="card-group">R-Ladies Irvine</div>
-<div class="card-header">November 2018 Tutorial: R Markdown and Data Visualization with ggplot2</div>
-<div class="card-time">Nov 14 at 06:30 PM</div>
-</div>
-</a>
-</div>
-<div class="card">
 <a href="https://www.meetup.com/rladies-pasadena/events/255843008/" class="action_link">
 <div class="container">
 <div class="card-group">R-Ladies Pasadena</div>
@@ -1542,7 +1533,7 @@ Recent Events
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
-<div class="radix-site-nav radix-site-footer">
+<div class="distill-site-nav distill-site-footer">
 <p><a href="https://www.flickr.com/photos/ian-arlett/23972975439/in/photolist-CwpLoK-DWzFLY-3LeqwG-SaQgMJ-ToMaHP-RFfCrU-S4VNrz-SmkE1e-ouLwbY-TsuTwn-S2h4Hf-TwAbb1-U4qLit-SpCK52-TwApNb-nTezk3-SmkNED-6R9J9g-TwAnp3-3h8ix5-ToM19i-4cXHCo-SiE6d1-T1eBDw-95waSD-oWNqC-TwAk91-6e1r6W-ZbEv3D-bqoJWA-TwApW7-573jd7-9Eo4BW-fvcZTV-bMYdzF-663n4G-SiE9iQ-4pi2wv-TfLxSu-SiEeqy-4Cx8sJ-4AzKjS-c9zbYq-Z69wGL-SckFbC-hfgmnW-X5228-ToLVKP-991S9U-9bx6Fc">Header photo licensed under Creative Commons 2.0</a></p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
