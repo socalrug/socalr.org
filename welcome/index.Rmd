@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Regression Estimation for Competing Risks<br><br>Talk 2: Patient Enrollment Monitoring System with shinydashboard/flexdashboard"
+subtitle: "<br>Talk 1: It’s not that we don’t test our code, it’s that we don’t store our tests<br><br>Talk 2: What drives social networks?"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -74,7 +74,7 @@ as_card <- function(event_name, group_name, event_time, link, ...) {
 
 ```{r, echo=FALSE}
 cards <- clean_events(events) %>% 
-  filter(group_name != "Los Angeles East R Users Group") %>% 
+  filter(group_name != "Los Angeles East R Users") %>% 
   pmap(as_card)
 ```
 
@@ -88,8 +88,8 @@ class: center, middle, inverse
 
 <br>
 
-## Bioconductor
-## Unit Testing
+## data.table
+## Stan
 
 
 --
@@ -119,9 +119,9 @@ class: center, middle, inverse
 <br>
 
 ### `r icon::fa("slack")` [bit.ly/laerug](http://bit.ly/laerug)
-### `r icon::fa("twitter")` [@laeRusers](https://twitter.com/laeRusers)
-### `r icon::fa("github")` [laeRusers](https://github.com/laeRusers/)
-### `r icon::fa("envelope")` [laerug@gmail.com](mailto:laerug@gmail.com)
+### `r icon::fa("twitter")` [@la_Rusers](https://twitter.com/laeRusers)
+### `r icon::fa("github")` [laRusers](https://github.com/laeRusers/)
+### `r icon::fa("envelope")` [laRusers@gmail.com](mailto:laerug@gmail.com)
 ### `r icon::fa("globe")` [laocr.org](https://lacor.org)
 
 <br>
