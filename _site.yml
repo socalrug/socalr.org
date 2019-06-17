@@ -13,4 +13,4 @@ navbar:
     - text: "About"
       href: about.html
       
-output: radix::radix_article
+output: distill::distill_article
