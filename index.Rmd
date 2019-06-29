@@ -59,7 +59,7 @@ events <- map2(laocrugs_meetups$meetup_page,
   )
 
   
-events <- events
+past_laocrugs_meetups <- laocrugs
 # 
 # past_laocrugs_meetups <- laocrugs %>% 
 #   filter(group_name != "Los Angeles East R Users Group")
