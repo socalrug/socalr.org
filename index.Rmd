@@ -113,9 +113,11 @@ clean_events <- function(events_data, descending = FALSE) {
 as_card <- function(event_name, group_name, event_time, link, ...) {
   tags$div(
     class = "card",
-    tags$a(href = link,
+    tags$a(
+      href = link,
       class = "action_link",
-      div(class = "container",
+      div(
+        class = "container",
         tags$div(group_name, class = "card-group"),
         tags$div(event_name, class = "card-header"),
         tags$div(event_time, class = "card-time")
