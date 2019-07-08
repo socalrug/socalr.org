@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: It’s not that we don’t test our code, it’s that we don’t store our tests<br><br>Talk 2: What drives social networks?"
+subtitle: "<br>Talk 1: Bayesian Analysis with rstan, rstanarm, and brms<br><br>Talk 2: Super speedy data manipulation with data.table: An overview"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -88,8 +88,8 @@ class: center, middle, inverse
 
 <br>
 
-## data.table
-## Stan
+## ggplot2 and the periodic table
+## intro to python via machine learning examples
 
 
 --
@@ -105,11 +105,6 @@ class: center, middle, inverse
 
 ## Thanks to the Department of Preventive Medicine at USC for supporting and feeding us!
 # 🍕🍕🍕
-
---
-
-## And to Ryan for video & IT support!
-# 🎥🖥🙏🙏🙏
 
 ---
 
