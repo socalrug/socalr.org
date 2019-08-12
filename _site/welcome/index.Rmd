@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Bayesian Analysis with rstan, rstanarm, and brms<br><br>Talk 2: Super speedy data manipulation with data.table: An overview"
+subtitle: "<br>Talk 1: Teaching ggplot2 with the periodic table<br><br>Talk 2: The YAML problem: intro to ymlthis"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -88,8 +88,8 @@ class: center, middle, inverse
 
 <br>
 
-## ggplot2 and the periodic table
-## intro to python via machine learning examples
+## Creating new vector types with vctrs
+## python for R users
 
 
 --
