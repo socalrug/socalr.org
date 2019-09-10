@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Teaching ggplot2 with the periodic table<br><br>Talk 2: The YAML problem: intro to ymlthis"
+subtitle: "<br>Talk 1: Creating custom vector classes with the vctrs package<br><br>Talk 2: Python for R Users"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -88,8 +88,8 @@ class: center, middle, inverse
 
 <br>
 
-## Creating new vector types with vctrs
-## python for R users
+## Deep learning in R
+## R + python with reticulate
 
 
 --
