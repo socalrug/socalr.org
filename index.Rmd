@@ -20,7 +20,8 @@ options(knitr.kable.NA = "--")
 library(tidyverse)
 library(googledrive)
 conflicted::conflict_prefer("filter", "dplyr")
-drive_download("laocrugs", type = "csv", overwrite = TRUE)
+drive_auth(path = Sys.getenv("LAOCRUG_TOKEN"))
+drive_download(as_id("1PxjivIKfqs0nDuSQy-EU_w2Vge6rLoUsuLDfS5r8izI"), type = "csv", overwrite = TRUE)
 laocrugs <- read_csv("laocrugs.csv")
 laocrugs <- laocrugs %>% 
   sample_n(nrow(laocrugs))
@@ -56,7 +57,8 @@ events <- map2(laocrugs_meetups$meetup_page,
       grepl("LA East", name) ~ "Los Angeles East R Users",
       TRUE ~ group_name
     )
-  )
+  ) %>% 
+  filter(status == "upcoming")
 
   
 past_laocrugs_meetups <- laocrugs

@@ -4,3 +4,6 @@
 .Ruserdata
 .httr-oauth
 cron_job.R
+.DS_Store
+.httr-oauth-SUSPENDED
+*.json
