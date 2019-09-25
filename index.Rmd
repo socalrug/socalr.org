@@ -62,9 +62,8 @@ events <- map2(laocrugs_meetups$meetup_page,
 
   
 past_laocrugs_meetups <- laocrugs
-# 
-# past_laocrugs_meetups <- laocrugs %>% 
-#   filter(group_name != "Los Angeles East R Users Group")
+past_laocrugs_meetups <- laocrugs %>% 
+ filter(!(group_name %in% c("Los Angeles East R Users Group", "Los Angeles West R Users Group")))
 
 past_events <- map2(
   past_laocrugs_meetups$meetup_page, 
@@ -80,7 +79,7 @@ past_events <- map2(
       grepl("LA East", name) ~ "Los Angeles East R Users",
       TRUE ~ group_name
     )
-  )
+  ) 
 
 past_events <- past_events %>% 
   group_by(group_name) %>% 
