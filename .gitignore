@@ -7,3 +7,4 @@ cron_job.R
 .DS_Store
 .httr-oauth-SUSPENDED
 *.json
+cron_log
