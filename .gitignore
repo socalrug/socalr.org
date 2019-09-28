@@ -8,3 +8,4 @@ cron_job.R
 .httr-oauth-SUSPENDED
 *.json
 cron_log
+cron_job.log
