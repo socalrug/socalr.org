@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Creating custom vector classes with the vctrs package<br><br>Talk 2: Python for R Users"
+subtitle: "<br>Talk 1: A Gentle Introduction Using R for Deep Learning<br><br>Talk 2: reticulate: running Python within RStudio"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -82,15 +82,33 @@ cards <- clean_events(events) %>%
 
 ---
 
+class: center, middle
+
+```{r, echo=FALSE, out.width="75%"}
+knitr::include_graphics("birthday.png")
+```
+
+---
+
 class: center, middle, inverse
 
 # Next Month
 
 <br>
 
-## Deep learning in R
-## R + python with reticulate
+## We're off!
 
+--
+
+## But...
+
+
+---
+
+class: center, middle, inverse
+
+# Sat, Nov. 23
+## `r icon::fa("sun")` SoCal R Users All-Hands Meetup
 
 --
 
