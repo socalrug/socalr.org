@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: A Gentle Introduction Using R for Deep Learning<br><br>Talk 2: reticulate: running Python within RStudio"
+subtitle: "<br>Talk 1: Web Applications: From HTML/JavaScript/CSS to Shiny<br><br>Talk 2: Data Science Reporting: Tips and Tricks for useRs"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -82,14 +82,6 @@ cards <- clean_events(events) %>%
 
 ---
 
-class: center, middle
-
-```{r, echo=FALSE, out.width="75%"}
-knitr::include_graphics("birthday.png")
-```
-
----
-
 class: center, middle, inverse
 
 # Next Month
@@ -97,23 +89,12 @@ class: center, middle, inverse
 <br>
 
 ## We're off!
-
---
-
-## But...
-
-
----
-
-class: center, middle, inverse
-
-# Sat, Nov. 23
-## `r icon::fa("sun")` SoCal R Users All-Hands Meetup
+## rstudio::conf(2020L): Jan. 27-30
 
 --
 
 <br><br><br>
-### Let us know if you want to give a talk!
+### Let us know if you want to give a talk in winter!
 
 ---
 
@@ -131,10 +112,10 @@ class: center, middle, inverse
 # Keep in touch! 
 <br>
 
-### `r icon::fa("slack")` [bit.ly/laerug](http://bit.ly/laerug)
-### `r icon::fa("twitter")` [@la_Rusers](https://twitter.com/laeRusers)
-### `r icon::fa("github")` [laRusers](https://github.com/laeRusers/)
-### `r icon::fa("envelope")` [laRusers@gmail.com](mailto:laerug@gmail.com)
+### `r icon::fa("slack")` [https://socalrug.herokuapp.com/](https://socalrug.herokuapp.com/)
+### `r icon::fa("twitter")` [@la_Rusers](https://twitter.com/la_Rusers)
+### `r icon::fa("github")` [laRusers](https://github.com/laRusers/)
+### `r icon::fa("envelope")` [larusers@gmail.com](mailto:larusers@gmail.com)
 ### `r icon::fa("globe")` [laocr.org](https://lacor.org)
 
 <br>
