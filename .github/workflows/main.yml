@@ -10,10 +10,10 @@ jobs:
         run: |-
           Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
           Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
-          Rscript -e "install.packages('distill')"
       - name: Render Site
         run: |-
-          Rscript -e "distill:::render_website(dir = '.', 'website')"
+          Rscript -e "Sys.setenv(LAOCRUG_TOKEN = $LAOCRUG_TOKEN)" \
+                  -e "distill:::render_website(dir = '.', 'website')"
           echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/master'
