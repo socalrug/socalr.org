@@ -16,7 +16,10 @@ knitr::opts_chunk$set(echo = FALSE)
 </div>
 
 ```{r}
-library(tidyverse)
+library(dplyr)
+library(purrr)
+library(lubridate)
+library(readr)
 library(htmltools)
 conflicted::conflict_prefer("filter", "dplyr")
 

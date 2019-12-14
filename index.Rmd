@@ -17,7 +17,10 @@ options(knitr.kable.NA = "--")
 ```
 
 ```{r, warning=FALSE, echo=FALSE}
-library(tidyverse)
+library(dplyr)
+library(purrr)
+library(lubridate)
+library(readr)
 library(googledrive)
 conflicted::conflict_prefer("filter", "dplyr")
 drive_auth(path = Sys.getenv("LAOCRUG_TOKEN"))
