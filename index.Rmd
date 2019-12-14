@@ -17,7 +17,6 @@ options(knitr.kable.NA = "--")
 ```
 
 ```{r, warning=FALSE, echo=FALSE}
-if (Sys.getenv("test_env") != 1 && Sys.getenv("test_env") != "1") stop("test_env is ", Sys.getenv("test_env", "NULL"))
 library(dplyr)
 library(purrr)
 library(lubridate)
