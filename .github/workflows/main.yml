@@ -11,6 +11,8 @@ jobs:
           Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
           Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
       - name: Render Site
+        env:
+          LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
         run: |-
           Rscript -e "Sys.setenv(LAOCRUG_TOKEN = ${LAOCRUG_TOKEN})" \
                   -e "distill:::render_website(dir = '.', 'website')"
@@ -21,7 +23,6 @@ jobs:
         with:
           args: deploy --dir=$DEPLOY_PATH --prod --site=$NETLIFY_SITE_ID
         env:
-          LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
     container: rocker/verse:latest
