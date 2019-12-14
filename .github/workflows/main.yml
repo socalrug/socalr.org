@@ -1,0 +1,29 @@
+name: Render and Deploy laocr.org (distill)
+'on': push
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Install Package Dependencies
+        run: |-
+          Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+          Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+          Rscript -e "install.packages('distill')"
+      - name: Render Site
+        run: |-
+          Rscript -e "distill:::render_website(dir = '.', 'website')"
+          echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
+      - name: Deploy to Netlify
+        if: github.ref == 'refs/heads/master'
+        uses: netlify/actions/cli@645ae7398cf5b912a3fa1eb0b88618301aaa85d0
+        with:
+          args:
+            - --dir $DEPLOY_PATH
+            - prod
+            - --site ${{ secrets.NETLIFY_SITE_ID }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+    container: rocker/verse:latest
