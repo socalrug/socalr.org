@@ -138,6 +138,12 @@ cards <- clean_events(events) %>%
 `r tagList(cards)`
 
 <div class="headers">
+<h1>Join us on Slack</h1>
+</div>
+
+Our R groups recently merged Slack spaces. Keep up with events, ask for help with R, and get to know your local R community: [Sign up today and join a network of R Users in Southern California](https://socalrug.herokuapp.com/).
+
+<div class="headers">
 <h1>SatRDay LA 2019</h1>
 </div>
 
