@@ -14,8 +14,7 @@ jobs:
         env:
           LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
         run: |-
-          Rscript -e "Sys.setenv(LAOCRUG_TOKEN = ${{ secrets.LAOCRUG_TOKEN }})" \
-                  -e "distill:::render_website(dir = '.', 'website')"
+          Rscript -e "distill:::render_website(dir = '.', 'website')"
           echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/master'
