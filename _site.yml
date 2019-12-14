@@ -1,7 +1,7 @@
 name: "laocrug"
-title: "Los Angeles and Orange County R Users"
+title: "Southern California R Users"
 description: |
-  An Alliance of R Users Groups in LA and OC
+  An Alliance of R Users Groups in Southern California
 output_dir: "_site"
 favicon: images/favicon.png
 navbar:
