@@ -22,6 +22,7 @@ jobs:
           args:
             - --dir $DEPLOY_PATH
             - prod
+            - --site NETLIFY_SITE_ID
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
