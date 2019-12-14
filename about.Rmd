@@ -1,5 +1,5 @@
 ---
-title: "Los Angeles and Orange County R Users"
+title: "Southern California R Users"
 output:
   distill::distill_article:
     includes:
@@ -17,8 +17,8 @@ laocrugs <- laocrugs %>%
   sample_n(nrow(laocrugs))
 ```
 
-We are an alliance of R users groups in Los Angeles and Orange County. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
+We are an alliance of R users groups in Southern California R Users. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
 
-If you are a new R organization in the area and would like to join, please [contact us](mailto:laerug@gmail.com).
+If you are a new R organization in the area and would like to join, please [contact us](mailto:larusers@gmail.com).
 
-You can find the source code for this website, which was written in R, on [GitHub](https://github.com/laeRusers/laocrug).
+You can find the source code for this website, which was written in R, on [GitHub](https://github.com/laRusers/laocrug).

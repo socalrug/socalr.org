@@ -1,5 +1,5 @@
 ---
-title: "Los Angeles and Orange County R Users"
+title: "Southern California R Users"
 output:
   distill::distill_article:
     includes:
