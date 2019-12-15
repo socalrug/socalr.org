@@ -39,7 +39,7 @@ We are an alliance of R users groups in Southern California. No single group can
 ```{r, include=FALSE}
 library(meetupr)
 meetupr::meetup_auth(httr::oauth2.0_token(httr::oauth_endpoint(authorize = "https://secure.meetup.com/oauth2/authorize", 
-            access = "https://secure.meetup.com/oauth2/access"), app = httr::oauth_app("meetup", key = getOption("meetupr.consumer_key"), secret = getOption("meetupr.consumer_secret")), use_oob = FALSE))
+            access = "https://secure.meetup.com/oauth2/access"), app = httr::oauth_app("meetup", key = getOption("meetupr.consumer_key"), secret = getOption("meetupr.consumer_secret")), scope = "basic"))
 
 get_any_events <- safely(get_events)
 
