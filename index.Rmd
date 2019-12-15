@@ -264,6 +264,7 @@ fa_rows <- laocrugs %>%
 ```{r, layout="l-screen-inset"}
 library(leaflet)
 library(ggmap)
+if (Sys.getenv("GOOGLE_MAPS_KEY") == "") stop("key is empty!")
 ggmap::register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
 addresses <- ggmap::geocode(laocrugs$address)
 
