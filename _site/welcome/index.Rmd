@@ -1,0 +1,122 @@
+---
+title: "Welcome!"
+subtitle: "<br>Talk 1: Web Applications: From HTML/JavaScript/CSS to Shiny<br><br>Talk 2: Data Science Reporting: Tips and Tricks for useRs"
+output:
+  xaringan::moon_reader:
+    css: ["default", "shinobi", "ninjutsu", "cards.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+class: center, inverse
+
+# LA and OC R User Groups
+<br>
+#[https://laocr.org](https://laocr.org)
+<br>
+## LA East and West R Users/DSLA
+## R-Ladies Los Angeles
+## R-Ladies Pasadena
+## R-Ladies Irvine
+## Orange County R Users Group
+
+---
+
+class: inverse
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(htmltools)
+library(here)
+
+events <- read_rds(here("events.rds"))
+past_events <- read_rds(here("past_events.rds"))
+
+clean_events <- function(events_data, descending = FALSE) {
+  months <- lubridate::month(events_data$time)
+  month_abbs <- month.abb[months]
+  days <- lubridate::day(events_data$time)
+  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
+  events_data$event_time <- paste(month_abbs, days, "at", hours)
+  
+  if (descending) {
+    events_data <- arrange(events_data, desc(time))
+    } else {
+    events_data <- arrange(events_data, time)
+  }
+  
+  events_data %>% 
+    select(event_name = name, group_name, event_time, link)
+}
+
+as_card <- function(event_name, group_name, event_time, link, ...) {
+  tags$div(
+    class = "card",
+    tags$a(href = link,
+      class = "action_link",
+      div(class = "container",
+        tags$div(group_name, class = "card-group"),
+        tags$div(event_name, class = "card-header"),
+        tags$div(event_time, class = "card-time")
+      )
+    )
+  )
+}
+```
+
+```{r, echo=FALSE}
+cards <- clean_events(events) %>% 
+  filter(group_name != "Los Angeles East R Users") %>% 
+  pmap(as_card)
+```
+
+`r tagList(cards)`
+
+---
+
+class: center, middle, inverse
+
+# Next Month
+
+<br>
+
+## We're off!
+## rstudio::conf(2020L): Jan. 27-30
+
+--
+
+<br><br><br>
+### Let us know if you want to give a talk in winter!
+
+---
+
+class: center, middle, inverse
+
+<br>
+
+## Thanks to the Department of Preventive Medicine at USC for supporting and feeding us!
+# 🍕🍕🍕
+
+---
+
+class: center, middle, inverse
+
+# Keep in touch! 
+<br>
+
+### `r icon::fa("slack")` [https://socalrug.herokuapp.com/](https://socalrug.herokuapp.com/)
+### `r icon::fa("twitter")` [@la_Rusers](https://twitter.com/la_Rusers)
+### `r icon::fa("github")` [laRusers](https://github.com/laRusers/)
+### `r icon::fa("envelope")` [larusers@gmail.com](mailto:larusers@gmail.com)
+### `r icon::fa("globe")` [laocr.org](https://lacor.org)
+
+<br>
+Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
