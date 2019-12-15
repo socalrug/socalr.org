@@ -256,7 +256,7 @@ fa_rows <- laocrugs %>%
 <div class="container container-buffer">
 <table class="tab" cellspacing="0" cellpadding="0">
 `r tagList(fa_rows)`
-</table>
+</table> 
 </div>
 </div>
 <br>
