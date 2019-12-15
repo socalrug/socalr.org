@@ -39,7 +39,7 @@ We are an alliance of R users groups in Southern California. No single group can
 ```{r, include=FALSE}
 library(meetupr)
 drive_download(as_id("1FaubEkb4rumQhf8vNOOBee7AEBPw4FCR"))
-meetup_auth(read_rds(".httr-oauth"[[1]]))
+meetup_auth(read_rds(".httr-oauth")[[1]])
 
 get_any_events <- safely(get_events)
 
