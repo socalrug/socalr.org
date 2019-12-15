@@ -1,1 +1,4 @@
 ^\.github/workflows$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.httr-oauth$
