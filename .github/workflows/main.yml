@@ -13,6 +13,7 @@ jobs:
       - name: Render Site
         env:
           LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
+          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: |-
           Rscript -e "distill:::render_website(dir = '.', 'website')"
           echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
