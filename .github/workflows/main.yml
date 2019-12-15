@@ -1,5 +1,11 @@
-name: Render and Deploy laocr.org (distill)
-'on': push
+name: Render and Deploy socalr.org (distill)
+'on':  
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '0 */6 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-18.04

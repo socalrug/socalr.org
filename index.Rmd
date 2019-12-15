@@ -32,8 +32,6 @@ laocrugs <- laocrugs %>%
 
 We are an alliance of R users groups in Southern California. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
 
-HERE IS A CONFIRMATION :)
-
 <div class="headers">
 <h1>Upcoming Events</h1>
 </div>
