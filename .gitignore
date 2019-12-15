@@ -9,4 +9,3 @@ cron_job.R
 *.json
 cron_log
 cron_job.log
-_site
