@@ -36,11 +36,12 @@ cards <- clean_events(events) %>%
 
 `r tagList(cards)`
 
+<a href='https://socalrug.slack.com'>
 <div class="headers">
-<h1>Join us on Slack</h1>
+<h1>Join us on Slack `r fontawesome::fa("slack", height = "1.8rem", fill = "black")`</h1>
 </div>
-
-Our R groups recently merged Slack spaces. Keep up with events, ask for help with R, and get to know your local R community: [Sign up today and join a network of R Users in Southern California](https://socalrug.herokuapp.com/).
+</a>
+Our R groups recently merged Slack spaces into a single space for all `r nrow(laocrugs)` meetups. Keep up with events, ask for help with R, and get to know your local R community: [Sign up today and join our network of R Users in Southern California](https://socalrug.herokuapp.com/).
 
 <div class="headers">
 <h1>SatRDay LA 2019</h1>
@@ -60,7 +61,7 @@ We look forward to seeing you next year at satRday LA 2020!
 
 ```{r, echo = FALSE, layout="l-body-outset"}
 fa_rows <- laocrugs %>%
-  select(group_name, website, email, meetup_page, twitter, github, slack) %>% 
+  select(group_name, website, email, meetup_page, twitter, github) %>% 
   pmap(fa_row)
 ```
 

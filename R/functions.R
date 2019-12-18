@@ -87,16 +87,6 @@ as_github <- function(x) {
   }
 }
 
-as_slack <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-    as_link(paste0("https://", x, ".slack.com/"), 
-            "slack") %>% 
-      tags$li()
-  }
-}
-
 as_group_name <- function(x) {
   tags$div(x, class = "fa-row-name")
 }
@@ -107,6 +97,6 @@ as_ul <- function(...) {
   )
 }
 
-fa_row <- function(group_name, website, email, meetup_page, twitter, github, slack) {
-  as_ul(as_group_name(group_name), as_website(website), as_email(email), as_meetup(meetup_page), as_twitter(twitter), as_github(github), as_slack(slack))
+fa_row <- function(group_name, website, email, meetup_page, twitter, github) {
+  as_ul(as_group_name(group_name), as_website(website), as_email(email), as_meetup(meetup_page), as_twitter(twitter), as_github(github))
 }
