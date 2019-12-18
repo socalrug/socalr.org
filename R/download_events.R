@@ -33,8 +33,8 @@ events <- map2(laocrugs_meetups$meetup_page,
   bind_rows() %>% 
   mutate(
     group_name = dplyr::case_when(
-      grepl("LA West", name) ~ "Los Angeles West R Users",
-      grepl("LA East", name) ~ "Los Angeles East R Users",
+      grepl("LA West", name) ~ "Los Angeles West R Users Group",
+      grepl("LA East", name) ~ "Los Angeles East R Users Group",
       TRUE ~ group_name
     )
   ) %>% 
@@ -53,8 +53,8 @@ past_events <- map2(
   bind_rows() %>% 
   mutate(
     group_name = dplyr::case_when(
-      grepl("LA West", name) ~ "Los Angeles West R Users",
-      grepl("LA East", name) ~ "Los Angeles East R Users",
+      grepl("LA West", name) ~ "Los Angeles West R Users Group",
+      grepl("LA East", name) ~ "Los Angeles East R Users Group",
       TRUE ~ group_name
     )
   ) 
