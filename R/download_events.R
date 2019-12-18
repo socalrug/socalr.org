@@ -24,7 +24,7 @@ pull_events <- function(.meetup_page, .group_name, ...) {
 }
 
 laocrugs_meetups <- laocrugs %>% 
-  filter(group_name != "Data Science LA", group_name != "Los Angeles West R Users Group")
+  filter(group_name != "Los Angeles West R Users Group")
 
 events <- map2(laocrugs_meetups$meetup_page, 
                laocrugs_meetups$group_name,
@@ -40,10 +40,8 @@ events <- map2(laocrugs_meetups$meetup_page,
   ) %>% 
   filter(status == "upcoming")
 
-
-past_laocrugs_meetups <- laocrugs
 past_laocrugs_meetups <- laocrugs %>% 
-  filter(!(group_name %in% c("Los Angeles East R Users Group", "Los Angeles West R Users Group")))
+  filter(group_name != "Los Angeles West R Users Group")
 
 past_events <- map2(
   past_laocrugs_meetups$meetup_page, 
