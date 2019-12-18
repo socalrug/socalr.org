@@ -33,43 +33,11 @@ class: center, inverse
 class: inverse
 
 ```{r, echo=FALSE, message=FALSE}
-library(tidyverse)
-library(htmltools)
-library(here)
+source(here::here("R", "packages.R"))
+source(here::here("R", "functions.R"))
 
-events <- read_rds(here::here("events.rds"))
-past_events <- read_rds(here::here("past_events.rds"))
-
-clean_events <- function(events_data, descending = FALSE) {
-  months <- lubridate::month(events_data$time)
-  month_abbs <- month.abb[months]
-  days <- lubridate::day(events_data$time)
-  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
-  events_data$event_time <- paste(month_abbs, days, "at", hours)
-  
-  if (descending) {
-    events_data <- arrange(events_data, desc(time))
-    } else {
-    events_data <- arrange(events_data, time)
-  }
-  
-  events_data %>% 
-    select(event_name = name, group_name, event_time, link)
-}
-
-as_card <- function(event_name, group_name, event_time, link, ...) {
-  tags$div(
-    class = "card",
-    tags$a(href = link,
-      class = "action_link",
-      div(class = "container",
-        tags$div(group_name, class = "card-group"),
-        tags$div(event_name, class = "card-header"),
-        tags$div(event_time, class = "card-time")
-      )
-    )
-  )
-}
+events <- read_rds(here::here("data", "events.rds"))
+past_events <- read_rds(here::here("data", "past_events.rds"))
 ```
 
 ```{r, echo=FALSE}
