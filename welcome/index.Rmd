@@ -37,8 +37,8 @@ library(tidyverse)
 library(htmltools)
 library(here)
 
-events <- read_rds(here("events.rds"))
-past_events <- read_rds(here("past_events.rds"))
+events <- read_rds(here::here("events.rds"))
+past_events <- read_rds(here::here("past_events.rds"))
 
 clean_events <- function(events_data, descending = FALSE) {
   months <- lubridate::month(events_data$time)
