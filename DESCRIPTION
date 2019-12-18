@@ -20,7 +20,7 @@ Imports:
     googledrive,
     here,
     htmltools,
-    icon,
+    icon (>= 0.1.0),
     leaflet,
     lubridate,
     meetupr (>= 0.2.0),
@@ -28,8 +28,9 @@ Imports:
     readr,
     rmarkdown,
     xaringan
-Remotes: 
+Remotes:  
     rladies/meetupr,
-    rstudio/fontawesome
+    rstudio/fontawesome,
+    ropenscilabs/icon
 Encoding: UTF-8
 LazyData: true
