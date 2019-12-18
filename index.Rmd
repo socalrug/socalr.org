@@ -25,27 +25,6 @@ past_events <- read_rds(here::here("data", "past_events.rds"))
 
 We are an alliance of R users groups in Southern California. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
 
-
-```{r, layout="l-screen-inset"}
-register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
-addresses <- geocode(laocrugs$address)
-
-icons <- awesomeIcons(
-  icon = 'ios-stats',
-  iconColor = 'black',
-  library = 'ion'
-)
-
-bind_cols(laocrugs, addresses) %>% 
-  filter(group_name != "Los Angeles West R Users") %>% 
-  mutate(group_name = ifelse(group_name == "Data Science LA", "Data Science LA/LA West R Users Group", group_name)) %>% 
-  leaflet() %>%
-  addProviderTiles(providers$CartoDB.Positron, options = providerTileOptions(minZoom = 7, maxZoom = 7)) %>% 
-  addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon = icons)
-  # doesn't work right now: addMarkers(~lon, ~lat, popup = ~group_name, icon = icons("https://www.r-project.org/logo/Rlogo.png", iconWidth = 25, iconHeight = 19))
-```
-
-
 <div class="headers">
 <h1>Upcoming Events</h1>
 </div>
@@ -58,11 +37,10 @@ cards <- clean_events(events) %>%
 
 `r tagList(cards)`
 
-<a href='https://socalrug.slack.com'>
 <div class="headers">
-<h1>Join us on Slack `r fontawesome::fa("slack", height = "1.8rem", fill = "black")`</h1>
+<h1>Join us on Slack</h1>
 </div>
-</a>
+
 Our R groups recently merged Slack spaces into a single space for all `r nrow(laocrugs)` meetups. Keep up with events, ask for help with R, and get to know your local R community: [Sign up today and join our network of R Users in Southern California](https://socalrug.herokuapp.com/).
 
 <div class="headers">
@@ -95,5 +73,26 @@ fa_rows <- laocrugs %>%
 </div>
 </div>
 <br>
+
+
+```{r, layout="l-screen-inset"}
+register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
+addresses <- geocode(laocrugs$address)
+
+icons <- awesomeIcons(
+  icon = 'ios-stats',
+  iconColor = 'black',
+  library = 'ion'
+)
+
+bind_cols(laocrugs, addresses) %>% 
+  filter(group_name != "Los Angeles West R Users") %>% 
+  mutate(group_name = ifelse(group_name == "Data Science LA", "Data Science LA/LA West R Users Group", group_name)) %>% 
+  leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron, options = providerTileOptions(minZoom = 7, maxZoom = 7)) %>% 
+  addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon = icons)
+  # doesn't work right now: addMarkers(~lon, ~lat, popup = ~group_name, icon = icons("https://www.r-project.org/logo/Rlogo.png", iconWidth = 25, iconHeight = 19))
+```
+
 
 
