@@ -94,7 +94,7 @@ bind_cols(laocrugs, addresses) %>%
   filter(group_name != "Los Angeles West R Users") %>% 
   mutate(group_name = ifelse(group_name == "Data Science LA", "Data Science LA/LA West R Users Group", group_name)) %>% 
   leaflet() %>%
-  setView(lon, lat, zoom = 7.5) %>% 
+  setView(lon, lat, zoom = 7.25) %>% 
   addProviderTiles(providers$CartoDB.Positron) %>% 
   addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon = icons)
   # doesn't work right now: addMarkers(~lon, ~lat, popup = ~group_name, icon = icons("https://www.r-project.org/logo/Rlogo.png", iconWidth = 25, iconHeight = 19))
