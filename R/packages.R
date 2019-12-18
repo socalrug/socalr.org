@@ -1,11 +1,20 @@
+# tidyverse
 library(dplyr)
 library(purrr)
 library(lubridate)
+library(stringr)
 library(readr)
+
+# store group info and credentials
 library(googledrive)
-library(htmltools)
+
+# map group locations
 library(leaflet)
 library(ggmap)
+
+# render html
+library(htmltools)
 library(fontawesome)
 
+# avoid base conflict with `filter()`
 conflicted::conflict_prefer("filter", "dplyr")

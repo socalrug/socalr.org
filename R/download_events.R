@@ -1,10 +1,4 @@
-library(dplyr)
-library(purrr)
-library(lubridate)
-library(readr)
-library(googledrive)
-library(meetupr)
-conflicted::conflict_prefer("filter", "dplyr")
+source(here::here("R", "packages.R"))
 
 drive_auth(path = Sys.getenv("LAOCRUG_TOKEN"))
 drive_download(
