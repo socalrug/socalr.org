@@ -3,7 +3,7 @@ title: "Southern California R Users"
 description: |
   An Alliance of R Users Groups in Southern California
 output_dir: "_site"
-favicon: images/favicon.png
+favicon: images/favicon.svg
 navbar:
   right:
     - text: "Home"
