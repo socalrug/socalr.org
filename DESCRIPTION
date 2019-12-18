@@ -9,6 +9,8 @@ Authors@R:
            comment = c(ORCID = "0000-0003-0299-5825"))
 Description: Render the SoCal R Website.
 License: MIT + file LICENSE
+URL: https://github.com/laRusers/socalr.org
+BugReports: https://github.com/laRusers/socalr.org/issues
 Imports: 
     conflicted,
     distill,
@@ -16,13 +18,16 @@ Imports:
     fontawesome (>= 0.1.0),
     ggmap,
     googledrive,
+    here,
     htmltools,
+    icon,
     leaflet,
     lubridate,
     meetupr (>= 0.2.0),
     purrr,
     readr,
-    rmarkdown
+    rmarkdown,
+    xaringan
 Remotes: 
     rladies/meetupr,
     rstudio/fontawesome
