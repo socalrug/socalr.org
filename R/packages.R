@@ -5,8 +5,9 @@ library(lubridate)
 library(stringr)
 library(readr)
 
-# store group info and credentials
+# group info and credentials
 library(googledrive)
+library(meetupr)
 
 # map group locations
 library(leaflet)
