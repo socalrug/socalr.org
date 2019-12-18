@@ -1,4 +1,4 @@
-name: Render and Deploy socalr.org (distill)
+name: Render and Deploy socalr.org
 'on':  
   push:
     branches:
