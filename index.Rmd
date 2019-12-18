@@ -18,11 +18,33 @@ source(here::here("R", "packages.R"))
 source(here::here("R", "functions.R"))
 
 laocrugs <- read_csv(here::here("data", "laocrugs.csv"))
+laocrugs <- sample_n(laocrugs, nrow(laocrugs))
 events <- read_rds(here::here("data", "events.rds"))
 past_events <- read_rds(here::here("data", "past_events.rds"))
 ```
 
 We are an alliance of R users groups in Southern California. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
+
+
+```{r, layout="l-screen-inset"}
+register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
+addresses <- geocode(laocrugs$address)
+
+icons <- awesomeIcons(
+  icon = 'ios-stats',
+  iconColor = 'black',
+  library = 'ion'
+)
+
+bind_cols(laocrugs, addresses) %>% 
+  filter(group_name != "Los Angeles West R Users") %>% 
+  mutate(group_name = ifelse(group_name == "Data Science LA", "Data Science LA/LA West R Users Group", group_name)) %>% 
+  leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon = icons)
+  # doesn't work right now: addMarkers(~lon, ~lat, popup = ~group_name, icon = icons("https://www.r-project.org/logo/Rlogo.png", iconWidth = 25, iconHeight = 19))
+```
+
 
 <div class="headers">
 <h1>Upcoming Events</h1>
@@ -73,24 +95,5 @@ fa_rows <- laocrugs %>%
 </div>
 </div>
 <br>
-
-```{r, layout="l-screen-inset"}
-register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
-addresses <- geocode(laocrugs$address)
-
-icons <- awesomeIcons(
-  icon = 'ios-stats',
-  iconColor = 'black',
-  library = 'ion'
-)
-
-bind_cols(laocrugs, addresses) %>% 
-  filter(group_name != "Los Angeles West R Users") %>% 
-  mutate(group_name = ifelse(group_name == "Data Science LA", "Data Science LA/LA West R Users Group", group_name)) %>% 
-  leaflet() %>%
-  addProviderTiles(providers$CartoDB.Positron) %>% 
-  addAwesomeMarkers(~lon, ~lat, popup = ~group_name, icon = icons)
-  # doesn't work right now: addMarkers(~lon, ~lat, popup = ~group_name, icon = icons("https://www.r-project.org/logo/Rlogo.png", iconWidth = 25, iconHeight = 19))
-```
 
 
