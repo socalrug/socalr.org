@@ -17,6 +17,7 @@ Imports:
     dplyr,
     fontawesome (>= 0.1.0),
     ggmap,
+    glue,
     googledrive,
     here,
     htmltools,
@@ -28,9 +29,9 @@ Imports:
     readr,
     rmarkdown,
     xaringan
-Remotes:  
+Remotes: 
     rladies/meetupr,
-    rstudio/fontawesome,
-    ropenscilabs/icon
+    ropenscilabs/icon,
+    rstudio/fontawesome
 Encoding: UTF-8
 LazyData: true

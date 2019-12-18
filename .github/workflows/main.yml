@@ -21,7 +21,8 @@ jobs:
           LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
           GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: |-
-          Rscript -e "distill:::render_website(dir = '.', 'website')" \
+          Rscript -e "source(here::here('R', 'download_events.R'))" \
+                  -e "distill:::render_website(dir = '.', 'website')" \
                   -e "rmarkdown::render('welcome/index.Rmd')"
           echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
       - name: Deploy to Netlify

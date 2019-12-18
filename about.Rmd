@@ -3,16 +3,17 @@ title: "Southern California R Users"
 output:
   distill::distill_article:
     includes:
-      in_header: header.html
-    css: styles.css
+      in_header: assets/header.html
+      after_body: assets/_footer.html
+    css: assets/styles.css
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(tidyverse)
-conflicted::conflict_prefer("filter", "dplyr")
 
-laocrugs <- read_csv("laocrugs.csv")
+source(here::here("R", "packages.R"))
+
+laocrugs <- read_csv(here::here("data", "laocrugs.csv"))
 laocrugs <- laocrugs %>% 
   sample_n(nrow(laocrugs))
 ```

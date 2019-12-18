@@ -3,31 +3,23 @@ title: "Southern California R Users"
 output:
   distill::distill_article:
     includes:
-      in_header: header.html
-    css: styles.css
+      in_header: assets/header.html
+      after_body: assets/_footer.html
+    css: assets/styles.css
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 options(knitr.kable.NA = "--")
-
-# Learn more about creating websites with Radix at:
-# https://rstudio.github.io/radix/website.html
-
 ```
 
 ```{r, warning=FALSE, echo=FALSE}
-library(dplyr)
-library(purrr)
-library(lubridate)
-library(readr)
-library(googledrive)
-conflicted::conflict_prefer("filter", "dplyr")
-drive_auth(path = Sys.getenv("LAOCRUG_TOKEN"))
-drive_download(as_id("1PxjivIKfqs0nDuSQy-EU_w2Vge6rLoUsuLDfS5r8izI"), type = "csv", overwrite = TRUE)
-laocrugs <- read_csv("laocrugs.csv")
-laocrugs <- laocrugs %>% 
-  sample_n(nrow(laocrugs))
+source(here::here("R", "packages.R"))
+source(here::here("R", "functions.R"))
+
+laocrugs <- read_csv(here::here("data", "laocrugs.csv"))
+events <- read_rds(here::here("data", "events.rds"))
+past_events <- read_rds(here::here("data", "past_events.rds"))
 ```
 
 We are an alliance of R users groups in Southern California. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.
@@ -36,108 +28,8 @@ We are an alliance of R users groups in Southern California. No single group can
 <h1>Upcoming Events</h1>
 </div>
 
-```{r, include=FALSE}
-library(meetupr)
-drive_download(as_id("1FaubEkb4rumQhf8vNOOBee7AEBPw4FCR"), overwrite = TRUE)
-meetup_auth(read_rds(".httr-oauth")[[1]])
-googledrive::drive_update(as_id("1FaubEkb4rumQhf8vNOOBee7AEBPw4FCR"), ".httr-oauth")
-
-get_any_events <- safely(get_events)
-
-pull_events <- function(.meetup_page, .group_name, ...) {
-  events <- get_any_events(.meetup_page, ...)
-  if (!is.null(events$result)) events$result$group_name <- .group_name
-  events
-}
-
-laocrugs_meetups <- laocrugs %>% 
-  filter(group_name != "Data Science LA", group_name != "Los Angeles West R Users Group")
-
-events <- map2(laocrugs_meetups$meetup_page, 
-               laocrugs_meetups$group_name,
-               pull_events) %>% 
-  map(pluck(1)) %>% 
-  bind_rows() %>% 
-  mutate(
-    group_name = dplyr::case_when(
-      grepl("LA West", name) ~ "Los Angeles West R Users",
-      grepl("LA East", name) ~ "Los Angeles East R Users",
-      TRUE ~ group_name
-    )
-  ) %>% 
-  filter(status == "upcoming")
-
-  
-past_laocrugs_meetups <- laocrugs
-past_laocrugs_meetups <- laocrugs %>% 
- filter(!(group_name %in% c("Los Angeles East R Users Group", "Los Angeles West R Users Group")))
-
-past_events <- map2(
-  past_laocrugs_meetups$meetup_page, 
-  past_laocrugs_meetups$group_name,
-  pull_events, 
-  event_status = "past"
-) %>% 
-  map(pluck(1)) %>% 
-  bind_rows() %>% 
-  mutate(
-    group_name = dplyr::case_when(
-      grepl("LA West", name) ~ "Los Angeles West R Users",
-      grepl("LA East", name) ~ "Los Angeles East R Users",
-      TRUE ~ group_name
-    )
-  ) 
-
-past_events <- past_events %>% 
-  group_by(group_name) %>% 
-  arrange(desc(time)) %>% 
-  slice(1:3) %>% 
-  ungroup()
-
-write_rds(events, "events.rds")
-write_rds(past_events, "past_events.rds")
-```
-
-```{r}
-library(htmltools)
-
-clean_events <- function(events_data, descending = FALSE) {
-  months <- lubridate::month(events_data$time)
-  month_abbs <- month.abb[months]
-  days <- lubridate::day(events_data$time)
-  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
-  events_data$event_time <- paste(month_abbs, days, "at", hours)
-  
-  if (descending) {
-    events_data <- arrange(events_data, desc(time))
-    } else {
-    events_data <- arrange(events_data, time)
-  }
-  
-  events_data %>% 
-    select(event_name = name, group_name, event_time, link)
-}
-
-as_card <- function(event_name, group_name, event_time, link, ...) {
-  tags$div(
-    class = "card",
-    tags$a(
-      href = link,
-      class = "action_link",
-      div(
-        class = "container",
-        tags$div(group_name, class = "card-group"),
-        tags$div(event_name, class = "card-header"),
-        tags$div(event_time, class = "card-time")
-      )
-    )
-  )
-}
-```
-
 ```{r}
 # `r clean_events(events) %>% pmap(as_card) %>% map(cat)`
-
 cards <- clean_events(events) %>% 
   pmap(as_card)
 ```
@@ -154,7 +46,7 @@ Our R groups recently merged Slack spaces. Keep up with events, ask for help wit
 <h1>SatRDay LA 2019</h1>
 </div>
 
-<img src="satrdays.png" class="floatrt mediumimg">The first SatRday in Southern California Los Angeles was held on April 6th, 2019 at UCLA! satRday LA was a huge success: tickets sold out and over 180 R users attended. If you missed it, you can <a href = 'https://www.youtube.com/playlist?list=PLQRHxIa9tfRvXYyaVS77zshvD0i17Y60s'>watch the recorded talks on YouTube</a> or <a href = 'https://github.com/satRdays/losangeles/tree/master/2019'>check out the slides on GitHub</a>. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>. 
+<img src="images/satrdays.png" class="floatrt mediumimg">The first SatRday in Southern California Los Angeles was held on April 6th, 2019 at UCLA! satRday LA was a huge success: tickets sold out and over 180 R users attended. If you missed it, you can <a href = 'https://www.youtube.com/playlist?list=PLQRHxIa9tfRvXYyaVS77zshvD0i17Y60s'>watch the recorded talks on YouTube</a> or <a href = 'https://github.com/satRdays/losangeles/tree/master/2019'>check out the slides on GitHub</a>. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>. 
 We look forward to seeing you next year at satRday LA 2020!
 
 <!-- For future use: A submission request -->
@@ -167,87 +59,6 @@ We look forward to seeing you next year at satRday LA 2020!
 </div>
 
 ```{r, echo = FALSE, layout="l-body-outset"}
-library(fontawesome)
-as_link <- function(link, icon, ...) {
-  tags$a(style = "text-decoration:none", href = link, fa(icon, height = "1.8rem", fill = "steelblue"), ...)
-}
-
-as_meetup <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-  as_link(paste0("https://meetup.com/", x), 
-        "meetup") %>% 
-    tags$li()
-  }
-}
-
-as_email <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-  as_link(paste0("mailto:", x), 
-        "envelope") %>% 
-    tags$li()
-  }
-}
-
-as_website <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-  as_link(x, 
-        "link") %>% 
-    tags$li()
-  }
-}
-
-as_twitter <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-  clean_name <- str_replace_all(x, "@", "")
-  as_link(paste0("https://twitter.com/", clean_name), 
-          "twitter") %>% 
-      tags$li()
-  }
-}
-
-as_github <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-  clean_name <- str_replace_all(x, "@", "")
-  as_link(paste0("https://github.com/", clean_name), 
-        "github") %>% 
-    tags$li()
-  }
-}
-
-as_slack <- function(x) {
-  if (is.na(x)) {
-    return(NULL)
-  } else {
-  as_link(paste0("https://", x, ".slack.com/"), 
-        "slack") %>% 
-    tags$li()
-  }
-}
-
-as_group_name <- function(x) {
-  tags$div(x, class = "fa-row-name")
-}
-
-as_ul <- function(...) {
-  tags$div(class = "fa-row",
-    tags$ul(class = "network-icon",  ...)
-  )
-}
-
-fa_row <- function(group_name, website, email, meetup_page, twitter, github, slack) {
-  as_ul(as_group_name(group_name), as_website(website), as_email(email), as_meetup(meetup_page), as_twitter(twitter), as_github(github), as_slack(slack))
-}
-
 fa_rows <- laocrugs %>%
   select(group_name, website, email, meetup_page, twitter, github, slack) %>% 
   pmap(fa_row)
@@ -263,10 +74,8 @@ fa_rows <- laocrugs %>%
 <br>
 
 ```{r, layout="l-screen-inset"}
-library(leaflet)
-library(ggmap)
-ggmap::register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
-addresses <- ggmap::geocode(laocrugs$address)
+register_google(Sys.getenv("GOOGLE_MAPS_KEY"))
+addresses <- geocode(laocrugs$address)
 
 icons <- awesomeIcons(
   icon = 'ios-stats',

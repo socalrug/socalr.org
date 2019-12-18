@@ -3,8 +3,9 @@ title: "Southern California R Users"
 output:
   distill::distill_article:
     includes:
-      in_header: header.html
-    css: styles.css
+      in_header: assets/header.html
+      after_body: assets/_footer.html
+    css: assets/styles.css
 ---
 
 ```{r setup, include=FALSE}
@@ -16,47 +17,11 @@ knitr::opts_chunk$set(echo = FALSE)
 </div>
 
 ```{r}
-library(dplyr)
-library(purrr)
-library(lubridate)
-library(readr)
-library(htmltools)
-conflicted::conflict_prefer("filter", "dplyr")
+source(here::here("R", "packages.R"))
+source(here::here("R", "functions.R"))
 
-events <- read_rds("events.rds")
-past_events <- read_rds("past_events.rds")
-
-clean_events <- function(events_data, descending = FALSE) {
-  months <- lubridate::month(events_data$time)
-  month_abbs <- month.abb[months]
-  days <- lubridate::day(events_data$time)
-  hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
-  events_data$event_time <- paste(month_abbs, days, "at", hours)
-  
-  if (descending) {
-    events_data <- arrange(events_data, desc(time))
-    } else {
-    events_data <- arrange(events_data, time)
-  }
-
-  
-  events_data %>% 
-    select(event_name = name, group_name, event_time, link)
-}
-
-as_card <- function(event_name, group_name, event_time, link, ...) {
-  tags$div(
-    class = "card",
-    tags$a(href = link,
-      class = "action_link",
-      div(class = "container",
-        tags$div(group_name, class = "card-group"),
-        tags$div(event_name, class = "card-header"),
-        tags$div(event_time, class = "card-time")
-      )
-    )
-  )
-}
+events <- read_rds(here::here("data", "events.rds"))
+past_events <- read_rds(here::here("data", "past_events.rds"))
 ```
 
 ```{r}

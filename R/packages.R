@@ -1,0 +1,11 @@
+library(dplyr)
+library(purrr)
+library(lubridate)
+library(readr)
+library(googledrive)
+library(htmltools)
+library(leaflet)
+library(ggmap)
+library(fontawesome)
+
+conflicted::conflict_prefer("filter", "dplyr")
