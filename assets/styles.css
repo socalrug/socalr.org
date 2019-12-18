@@ -36,7 +36,7 @@ body {
 d-title {
   width: 100%;
   padding-top: 6rem;
-  background-image: url("images/header.jpg");
+  background-image: url("../images/header.jpg");
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
