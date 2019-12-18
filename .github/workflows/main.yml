@@ -22,8 +22,8 @@ jobs:
           GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: |-
           Rscript -e "source(here::here('R', 'download_events.R'))" \
-                  -e "distill:::render_website(dir = '.', 'website')" \
-                  -e "rmarkdown::render('welcome/index.Rmd')"
+                  -e "rmarkdown::render('welcome/index.Rmd')" \
+                  -e "distill:::render_website(dir = '.', 'website')" 
           echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/master'
