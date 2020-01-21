@@ -1,9 +1,7 @@
 clean_events <- function(events_data, descending = FALSE) {
-  print(events_data$time)
-  lubridate::tz(events_data$time) <- "America/Los_Angeles"
-  months <- lubridate::month(events_data$time)
+  months <- lubridate::month(events_data$local_date)
   month_abbs <- month.abb[months]
-  days <- lubridate::day(events_data$time)
+  days <- lubridate::day(events_data$local_date)
   hours <- format(strptime(events_data$local_time, "%H:%M"), "%I:%M %p")
   events_data$event_time <- paste(month_abbs, days, "at", hours)
   
