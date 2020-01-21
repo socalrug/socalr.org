@@ -1,5 +1,5 @@
 clean_events <- function(events_data, descending = FALSE) {
-  lubridate::tz(x$time) <- "America/Los_Angeles"
+  lubridate::tz(events_data$time) <- "America/Los_Angeles"
   months <- lubridate::month(events_data$time)
   month_abbs <- month.abb[months]
   days <- lubridate::day(events_data$time)
