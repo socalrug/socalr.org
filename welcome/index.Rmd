@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-subtitle: "<br>Talk 1: Web Applications: From HTML/JavaScript/CSS to Shiny<br><br>Talk 2: Data Science Reporting: Tips and Tricks for useRs"
+subtitle: "<br>Talk 1: Getting better at R By Learning More Packages More Deeply<br><br>Talk 2: This time it's personal: Livecoding a personal R pkg"
 output:
   xaringan::moon_reader:
     css: ["default", "shinobi", "ninjutsu", "cards.css"]
@@ -18,15 +18,20 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 class: center, inverse
 
-# LA and OC R User Groups
+# SoCal R User Groups
 <br>
-#[https://laocr.org](https://laocr.org)
+#[https://socalr.org](https://socalr.org)
 <br>
-## LA East and West R Users/DSLA
-## R-Ladies Los Angeles
-## R-Ladies Pasadena
-## R-Ladies Irvine
-## Orange County R Users Group
+### LA East and West R Users/DSLA
+### R-Ladies Los Angeles
+### R-Ladies Pasadena
+### R-Ladies Irvine
+### Orange County R Users Group
+### Santa Barbara R Users Group
+### R-Ladies Santa Barbara 
+### R-Ladies San Diego
+### San Diego R Users Group
+### San Luis Obispo R Users Group
 
 ---
 
@@ -56,13 +61,13 @@ class: center, middle, inverse
 
 <br>
 
-## We're off!
-## rstudio::conf(2020L): Jan. 27-30
+## Teaching R
+## Spatial Analysis in R
 
 --
 
 <br><br><br>
-### Let us know if you want to give a talk in winter!
+### Let us know if you want to give a talk!
 
 ---
 
@@ -84,7 +89,7 @@ class: center, middle, inverse
 ### `r icon::fa("twitter")` [@la_Rusers](https://twitter.com/la_Rusers)
 ### `r icon::fa("github")` [laRusers](https://github.com/laRusers/)
 ### `r icon::fa("envelope")` [larusers@gmail.com](mailto:larusers@gmail.com)
-### `r icon::fa("globe")` [laocr.org](https://lacor.org)
+### `r icon::fa("globe")` [socalr.org](https://socalr.org)
 
 <br>
 Slides created via the R package [xaringan](https://github.com/yihui/xaringan).
