@@ -44,11 +44,12 @@ cards <- clean_events(events) %>%
 Our R groups recently merged Slack spaces into a single space for all `r nrow(laocrugs)` meetups. Keep up with events, ask for help with R, and get to know your local R community: [Sign up today and join our network of R Users in Southern California](https://socalrug.herokuapp.com/).
 
 <div class="headers">
-<h1>SatRDay LA 2019</h1>
+<h1>SatRDay SoCal</h1>
 </div>
 
-<img src="images/satrdays.png" class="floatrt mediumimg">The first SatRday in Southern California Los Angeles was held on April 6th, 2019 at UCLA! satRday LA was a huge success: tickets sold out and over 180 R users attended. If you missed it, you can <a href = 'https://www.youtube.com/playlist?list=PLQRHxIa9tfRvXYyaVS77zshvD0i17Y60s'>watch the recorded talks on YouTube</a> or <a href = 'https://github.com/satRdays/losangeles/tree/master/2019'>check out the slides on GitHub</a>. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>. 
-We look forward to seeing you next year at satRday LA 2020!
+<img src="images/satrdays.png" class="floatrt mediumimg">The first satRday in Southern California, satRday Los Angeles, was held on April 6th, 2019 at UCLA! satRday LA was a huge success: tickets sold out and over 180 R users attended. If you missed it, you can <a href = 'https://www.youtube.com/playlist?list=PLQRHxIa9tfRvXYyaVS77zshvD0i17Y60s'>watch the recorded talks on YouTube</a> or <a href = 'https://github.com/satRdays/losangeles/tree/master/2019'>check out the slides on GitHub</a>. For other event details and announcements, please visit <a href = 'https://losangeles2019.satrdays.org'>https://losangeles2019.satrdays.org</a>. 
+
+Plans for the next edition, satRday SoCal, are on hiatus due to the global pandemic. We look forward to gathering our communities together again as soon as we are able to safely do so!
 
 <!-- For future use: A submission request -->
 <!-- satRday Los Angeles 2019 is now accepting submissions for session talks, lightning talks, and posters! The deadline is Feb 10, 2018. Submit today at <a href = 'https://sessionize.com/satrday-la-2019'>sessionize</a>. -->
