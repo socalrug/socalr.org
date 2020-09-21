@@ -47,16 +47,20 @@ jobs:
           LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
           GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
         run: |-
-          Rscript -e "source(here::here('R', 'download_events.R'))" \
-                  -e "rmarkdown::render('welcome/index.Rmd')" \
-                  -e "distill:::render_website(dir = '.', 'website')" 
-          echo "::set-env name=DEPLOY_PATH::$(Rscript -e "cat(rmarkdown::site_config()[['output_dir']])")"
-          
+          source(here::here('R', 'download_events.R'))
+          rmarkdown::render('welcome/index.Rmd')
+          distill:::render_website(dir = '.', 'website')
+        shell: Rscript {0}
+        
+      - name: Install npm
+        uses: actions/setup-node@v1
+
       - name: Deploy to Netlify
-        if: github.ref == 'refs/heads/master'
-        uses: netlify/actions/cli@645ae7398cf5b912a3fa1eb0b88618301aaa85d0
-        with:
-          args: deploy --dir=$DEPLOY_PATH --prod --site=$NETLIFY_SITE_ID
+        # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npm install netlify-cli -g
+          netlify deploy --prod
+
