@@ -38,8 +38,8 @@ jobs:
       - name: Install Package Dependencies
         run: |-
           options(repos = 'https://packagemanager.rstudio.com/all/latest')
-          install.packages('remotes')
-          remotes::install_deps(dependencies = TRUE)
+          install.packages('renv')
+          renv::install()
         shell: Rscript {0}  
       - name: Render Site
         env:
