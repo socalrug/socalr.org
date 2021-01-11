@@ -30,7 +30,7 @@ Imports:
     rmarkdown,
     xaringan
 Remotes: 
-    rladies/meetupr,
+    rladies/meetupr@59d2b6c,
     mitchelloharawild/icon@4ef7ed0,
     rstudio/fontawesome
 Encoding: UTF-8
