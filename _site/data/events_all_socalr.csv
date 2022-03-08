@@ -1,0 +1,60 @@
+created,name,local_date,local_time,speakers,description,link,group_name
+2022-03-07,Creating model en mass with workflowsets,2021-05-18,07:00:00 PM,Max Kuhn,,,SoCal R Users Group
+2022-03-07,Column Names as Contracts,2021-04-27,07:00:00 PM,Emily Riederer,,,SoCal R Users Group
+2022-03-07,R from the Command Line,2021-03-24,07:00:00 PM,James Lamb,,,SoCal R Users Group
+2022-03-07,R in the Terminal - Survival Strategies,2021-03-24,07:00:00 PM,Neal Fultz,,,SoCal R Users Group
+2022-03-07,Unified Data Applications with Shiny on Delta Lakes,2021-02-23,07:00:00 PM,Hossein Falaki,,,SoCal R Users Group
+2022-03-07,The Download (Recent Updates in the R Markdown Family),2020-12-08,07:00:00 PM,Alison Hill,,,SoCal R Users Group
+2022-03-07,Reproducible computation at scale in R with targets,2020-10-27,07:00:00 PM,Will Landau,,,SoCal R Users Group
+2022-03-07,Bigger but local: Tools for uncomfortably big data,2020-09-22,07:00:00 PM,Edward Visel,,,SoCal R Users Group
+2022-03-07,Dissecting a Function: Profiling and Benchmarking Your Way to Faster Code,2020-08-18,07:00:00 PM,Adam Austin,,,SoCal R Users Group
+2022-03-07,Non-exhaustive list of lesser used base R features,2020-08-18,07:00:00 PM,Karolis Koncevičius,,,SoCal R Users Group
+2022-03-07,Three Reasons to Use tidymodels,2020-06-30,07:00:00 PM,Julia Silge,,,SoCal R Users Group
+2022-03-07,Making Tables with the gt Package,2020-05-27,07:00:00 PM,Rich Iannone,,,SoCal R Users Group
+2022-03-07,Dynamic programming for machine learning: Hidden Markov Models,2020-05-27,07:00:00 PM,Avik Das,,,SoCal R Users Group
+2022-03-07,Creating an R workshop experience during the ACS National Meeting,2020-04-23,07:00:00 PM,Donna Wrublewski,,,SoCal R Users Group
+2022-03-07,vctrs: Creating custom vector classes with the vctrs package,2020-03-19,07:00:00 PM,Jesse Sadler,,,SoCal R Users Group
+2022-03-07,Starter Guide to R Plumber + Slack,2020-03-19,07:00:00 PM,Emad Hasan,,,SoCal R Users Group
+2022-03-07,Draw fractals from root finding iteration in R,2020-02-25,07:00:00 PM,Keren Xu,,,SoCal R Users Group
+2022-03-07,Bracketball: Let's Explore March Madness with ncaahoopR,2020-02-25,07:00:00 PM,Luke Morris,,,SoCal R Users Group
+2022-03-07,Web Applications: From HTML/JavaScript/CSS to Shiny,2019-12-09,07:00:00 PM,Nellie Ponarul,,,SoCal R Users Group
+2022-03-07,Data Science Reporting: Tips and Tricks for useRs,2019-12-09,07:00:00 PM,Amy Tzu-Yu Chen,,,SoCal R Users Group
+2022-03-07,To Stick or To Switch: Student Major Changes at UCLA,2019-10-24,07:00:00 PM,"Jeanette Lin & Keith Atienza, The Stack",,,SoCal R Users Group
+2022-03-07,Analyzing Denzel Curry’s Lyrics Through Text Mining,2019-10-24,07:00:00 PM,"Nikhil Sharma & Raghava Govil, Datares",,,SoCal R Users Group
+2022-03-07,A gentle Introduction Using R for Deep Learning,2019-10-14,07:00:00 PM,Charlotte Deng,,,SoCal R Users Group
+2022-03-07,reticulate: running Python within RStudio,2019-10-14,07:00:00 PM,Jo Hardin,,,SoCal R Users Group
+2022-03-07,Functional programming with purrr,2019-09-26,07:00:00 PM,Malcolm Barrett,,,SoCal R Users Group
+2022-03-07,Creating custom vector classes with the vctrs package,2019-09-09,07:00:00 PM,Jesse Sadler,,,SoCal R Users Group
+2022-03-07,Python for R Users,2019-09-09,07:00:00 PM,Sylvia Tran,,,SoCal R Users Group
+2022-03-07,Teaching ggplot2 with the Periodic Table,2019-08-12,07:00:00 PM,Donna Wrublewski,,,SoCal R Users Group
+2022-03-07,The YAML problem: Writing and working with YAML with ymlthis,2019-08-12,07:00:00 PM,Malcolm Barrett,,,SoCal R Users Group
+2022-03-07,"Bayesian Analysis with rstan, rstanarm, and brms",2019-08-12,07:00:00 PM,Seo Young Silvia Kim,,,SoCal R Users Group
+2022-03-07,Super speedy data manipulation with data.table: An overview,2019-08-12,07:00:00 PM,Jared Kai Swan,,,SoCal R Users Group
+2022-03-07,useR! 2019 Recap,2019-07-31,07:00:00 PM,Amy Tzu-Yu Chen,,,SoCal R Users Group
+2022-03-07,Better Name Matching via Machine Learning,2019-07-31,07:00:00 PM,Jeremy Guinta & Nellie Ponarul,,,SoCal R Users Group
+2022-03-07,Using GLRM on h2o to Predict Customer Lifetime Value,2019-06-27,07:00:00 PM,Corinne Powers,,,SoCal R Users Group
+2022-03-07,Are there any Globe Trotter Body Swappers to Figure out Who's who in NBA Lineups?,2019-06-27,07:00:00 PM,Michael Tzen,,,SoCal R Users Group
+2022-03-07,"It’s not that we don’t test our code, it’s that we don’t store our tests",2019-06-10,07:00:00 PM,John Peach,,,SoCal R Users Group
+2022-03-07,What drives social networks?: A gentle introduction to exponential random graph models (with a focus on small networks),2019-06-10,07:00:00 PM,George G Vega Yon,,,SoCal R Users Group
+2022-03-07,Better than Deep Learning: Gradient Boosting Machines (GBM) – 2019 edition,2019-05-28,07:00:00 PM,Szilard Pafka,,,SoCal R Users Group
+2022-03-07,A Fast and Scalable Sparse Regression Method for Competing Risks Data,2019-05-13,07:00:00 PM,Eric S. Kawaguchi,,,SoCal R Users Group
+2022-03-07,Monitor Patient Enrollment with flexdashboard and shinydashboard Packages,2019-05-13,07:00:00 PM,Yujie Cui,,,SoCal R Users Group
+2022-03-07,Data Visualization from Start to Finish,2019-04-08,07:00:00 PM,Zev Youra,,,SoCal R Users Group
+2022-03-07,Bayesian Modeling with R2jags,2019-04-08,07:00:00 PM,Zhi Yang,,,SoCal R Users Group
+2022-03-07,Functional programming with purrr,2019-03-18,07:00:00 PM,Daniel Chu,,,SoCal R Users Group
+2022-03-07,JavaScript for the R Programmer,2019-03-18,07:00:00 PM,Alan Dipert,,,SoCal R Users Group
+2022-03-07,Working with data in the music business,2019-02-11,07:00:00 PM,John Rosenfelder,,,SoCal R Users Group
+2022-03-07,What I learned at rstudio::conf,2019-02-11,07:00:00 PM,Zhi Yang,,,SoCal R Users Group
+2022-03-07,Time Series & ARIMA forecasting,2019-01-14,07:00:00 PM,Anthony Doan,,,SoCal R Users Group
+2022-03-07,Classification and Statistical Analysis of Cancer Mutations Scores,2019-01-14,07:00:00 PM,Yemi Odeyemi,,,SoCal R Users Group
+2022-03-07,Interactive Dashboards with Shiny,2018-12-10,07:00:00 PM,Robert Mitchell,,,SoCal R Users Group
+2022-03-07,Text Analysis in R: Special Christmas Edition,2018-12-10,07:00:00 PM,Emil Hvitfeldt,,,SoCal R Users Group
+2022-03-07,Introduction to R Markdown,2018-11-12,07:00:00 PM,Sep Dadsetan,,,SoCal R Users Group
+2022-03-07,A brief introduction to using R for high-performance computing,2018-11-12,07:00:00 PM,George G Vega Yon,,,SoCal R Users Group
+2022-03-07,"ggplotline: Telling a story with labels, colors, and layout",2018-10-29,07:00:00 PM,Malcolm Barrett,,,SoCal R Users Group
+2022-03-07,Introduction to the Biostatistics Division,2018-10-08,07:00:00 PM,Paul Marjoram,,,SoCal R Users Group
+2022-03-07,"Data Science Hackathon - **Signup on Eventbrite, not Meetup**",2022-04-02,08:30:00 AM,SoCal RUG,"We are excited to announce that SoCal RUG will be having an in-person data science hackathon! It is a weekend-long event from April 2nd to the 3rd, 2022.",https://www.meetup.com/SOCAL-RUG/events/284479173?utm_medium=email&utm_source=braze_canvas&utm_campaign=mmrk_alleng_event_announcement_prod_v4_en&utm_term=promo&utm_content=lp_meetup,SoCal R Users Group
+2022-03-07,Data Visualization with R,2022-04-23,09:00:00 AM,Dr. Robert Kabacoff,"This event is being hosted by the Southern California Chapter of the American Statistical Association. It is a free, virtual course in using data visualization in R.",https://www.meetup.com/SOCAL-RUG/events/284478699?utm_medium=email&utm_source=braze_canvas&utm_campaign=mmrk_alleng_event_announcement_prod_v4_en&utm_term=promo&utm_content=lp_meetup,SoCal R Users Group
+2022-03-07,Non-Parametric Statistics Workshop,2022-02-26,09:00:00 AM,Dr. Olga Korosteleva ,This workshop will give you the practical skills and foundation knowledge to effectively use some of the most common nonparametric models used by data scientists.,https://www.eventbrite.com/e/socal-rug-nonparametric-analysis-a-primer-tickets-234310367617#,SoCal R Users Group
+2022-03-07,Creating Features for Machine Learning from Text,2022-02-22,06:00:00 PM,Julia Silge,"In this talk, learn about the process of text preprocessing for ML models in the real world, how and when practitioners use different preprocessing choices, and considerations for text ML tooling.",https://www.meetup.com/SOCAL-RUG/events/283613667/?rv=md1&_xtd=gatlbWFpbF9jbGlja9oAJDc1YWFjYWQ1LWJjZDAtNDNlZC1iODQ2LTk2YjFmYjI5ZGE3MA&_af=event&_af_eid=283613667,SoCal R Users Group
+2022-03-07,Book club – Information Rules: A Strategic Guide to the Network Economy,2022-01-17,04:00:00 PM,John Peach,"In Information Rules, authors Shapiro and Varian reveal that many classic economic concepts can provide the insight and understanding necessary to succeed in the information age. ",https://www.meetup.com/SOCAL-RUG/events/283044538?response=3&action=rsvp&utm_medium=email&utm_source=braze_canvas&utm_campaign=mmrk_alleng_event_announcement_prod_v3_en&utm_term=promo&utm_content=lp_meetup,SoCal R Users Group

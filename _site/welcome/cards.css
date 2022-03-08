@@ -1,0 +1,54 @@
+.remark-slide {
+  background-image: url(https://raw.githubusercontent.com/laeRusers/logos/master/laerug_hexsticker.png);
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  background-size: 34%;
+}
+
+.title-slide {
+  width: 40%;
+}
+
+h1.title-slide {
+    padding-top: 10%;
+    font-size: 4em;
+}
+
+.card {
+    color: #474747;
+    background-color: #272822;
+    transition: 0.3s;
+    border-radius: 10px; 
+    margin: 16px 16px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.container-buffer {
+  padding-top: 28px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.card-group {
+  color: #edeeef;
+  font-size: 22px;
+  padding: 4px 4px;
+}
+
+.card-header {
+  font-size: 24px;
+  padding: 4px 4px;
+}
+
+.card-header:hover{
+  transform:scale(1)
+}
+
+.card-time {
+  color: #edeeef;
+  padding: 4px 4px;
+}
