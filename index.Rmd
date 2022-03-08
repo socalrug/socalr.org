@@ -18,9 +18,16 @@ source(here::here("R", "packages.R"))
 source(here::here("R", "functions.R"))
 
 laocrugs <- read_csv(here::here("data", "laocrugs.csv"))
-laocrugs <- sample_n(laocrugs, nrow(laocrugs))
-events <- read_rds(here::here("data", "events.rds"))
-past_events <- read_rds(here::here("data", "past_events.rds"))
+laocrugs <- slice_sample(laocrugs, n = nrow(laocrugs))
+
+events_all <- read_csv(here::here("data", "events_all_socalr.csv"),
+                       show_col_types = FALSE,
+                       col_types = c("D", "c", "D", "t", 
+                                     "c", "c", "c", "c")) %>% 
+  filter(lubridate::year(local_date) >= 2022)
+
+events <- events_all %>% filter(local_date >= Sys.Date())
+past_events <- events_all %>% filter(local_date < Sys.Date())
 ```
 
 We are an alliance of R users groups in Southern California. No single group can serve this sprawling area, and so we have joined forces to centralize all R group events and information in one place. We currently include `r glue::glue_collapse(laocrugs$group_name, sep = ", ", last = ", and ")`.

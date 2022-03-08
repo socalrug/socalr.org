@@ -5,3 +5,4 @@
 ^\.Rproj\.user$
 ^\.httr-oauth$
 ^README\.Rmd$
+^~/\.local/share/meetupr/meetupr-token\.rds$
