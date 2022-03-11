@@ -72,14 +72,6 @@
         "sys"
       ]
     },
-    "assertthat": {
-      "Package": "assertthat",
-      "Version": "0.2.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "50c838a310445e954bc13f26f26a6ecf",
-      "Requirements": []
-    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
@@ -765,27 +757,6 @@
         "xfun"
       ]
     },
-    "meetupr": {
-      "Package": "meetupr",
-      "Version": "0.2.3.9991",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteUsername": "rladies",
-      "RemoteRepo": "meetupr",
-      "RemoteRef": "master",
-      "RemoteSha": "4b27de02c504b8fb2c9dde0b774ec326eb2bcd29",
-      "RemoteHost": "api.github.com",
-      "Hash": "5d824159f3accd2d78a221cce9d9ffb6",
-      "Requirements": [
-        "httr",
-        "purrr",
-        "rappdirs",
-        "ratelimitr",
-        "rlang",
-        "tibble",
-        "withr"
-      ]
-    },
     "memoise": {
       "Package": "memoise",
       "Version": "2.0.1",
@@ -954,16 +925,6 @@
         "Rcpp",
         "sp",
         "terra"
-      ]
-    },
-    "ratelimitr": {
-      "Package": "ratelimitr",
-      "Version": "0.4.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "4b0980d0fba83d6a50e2656cb51d7a5f",
-      "Requirements": [
-        "assertthat"
       ]
     },
     "readr": {
