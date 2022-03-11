@@ -7,7 +7,7 @@ library(readr)
 
 # group info and credentials
 library(googledrive)
-library(meetupr)
+#library(meetupr)
 
 # map group locations
 library(leaflet)
