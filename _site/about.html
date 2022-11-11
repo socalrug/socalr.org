@@ -181,20 +181,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://www.meetup.com/socal-rug/" class="sidebar-item-text sidebar-link">Join our Meetups</a>
-  </div>
-</li>
+  <a href="https://www.meetup.com/socal-rug/" target="_blank">Join our Meetups</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/presentations" class="sidebar-item-text sidebar-link">Past Presentations</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/presentations" target="_blank">Past Presentations</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="mailto:orangecounty.rug@gmail.com" class="sidebar-item-text sidebar-link">Contact Us</a>
-  </div>
-</li>
+  <a href="mailto:orangecounty.rug@gmail.com" target="_blank">Contact Us</a>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -206,30 +200,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/hackathon-2022-04" class="sidebar-item-text sidebar-link">Apr 2022</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/hackathon-2022-04" target="_blank">Apr 2022</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/hackathon-2021-04" class="sidebar-item-text sidebar-link">Apr 2021</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/hackathon-2021-04" target="_blank">Apr 2021</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/hackathon-2020-04" class="sidebar-item-text sidebar-link">Apr 2020</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/hackathon-2020-04" target="_blank">Apr 2020</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/hackathon-2019-11" class="sidebar-item-text sidebar-link">Nov 2019</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/hackathon-2019-11" target="_blank">Nov 2019</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/hackathon-2019-05" class="sidebar-item-text sidebar-link">May 2019</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/hackathon-2019-05" target="_blank">May 2019</a>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -241,25 +225,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://www.meetup.com/socal-rug/events/289510286/" class="sidebar-item-text sidebar-link">Portfolio Building</a>
-  </div>
-</li>
+  <a href="https://www.meetup.com/socal-rug/events/289510286/" target="_blank">Portfolio Building</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/advanced_regression_2022-10-01" class="sidebar-item-text sidebar-link">Advanced Regressions</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/advanced_regression_2022-10-01" target="_blank">Advanced Regressions</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/msba-python-workshop-2022-07" class="sidebar-item-text sidebar-link">Intro to Python</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/msba-python-workshop-2022-07" target="_blank">Intro to Python</a>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://github.com/socalrug/nonparametric_analysis_2022-01-22" class="sidebar-item-text sidebar-link">Nonparametric Analysis</a>
-  </div>
-</li>
+  <a href="https://github.com/socalrug/nonparametric_analysis_2022-01-22" target="_blank">Nonparametric Analysis</a>
+  </li>
       </ul>
   </li>
     </ul>
@@ -431,6 +407,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/socalr\.org\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
