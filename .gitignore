@@ -3,10 +3,11 @@
 .RData
 .Ruserdata
 .httr-oauth
-cron_job.R
 .DS_Store
 .httr-oauth-SUSPENDED
 *.json
 cron_log
 cron_job.log
 ~/.local/share/meetupr/meetupr-token.rds
+
+/.quarto/
