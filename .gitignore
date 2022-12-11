@@ -9,5 +9,5 @@
 cron_log
 cron_job.log
 ~/.local/share/meetupr/meetupr-token.rds
-
 /.quarto/
+~/Library/Application Support/meetupr/meetupr-token.rds
