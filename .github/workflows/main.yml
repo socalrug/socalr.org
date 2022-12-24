@@ -8,50 +8,43 @@ name: Render and Deploy socalr.org
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@master
-
-      - name: Setup R
-        uses: r-lib/actions/setup-r@v1
-
-      - name: Install pandoc
-        run: |
-          brew install pandoc
-
-      - name: Cache Renv packages
-        uses: actions/cache@v2
+      - name: Checkout Repo and Create PR
+        uses: actions/checkout@v3
         with:
-          path: $HOME/.local/share/renv
-          key: r-${{ hashFiles('renv.lock') }}
-          restore-keys: r-
+          fetch-depth: 0
 
-      - name: Install Package Dependencies
-        run: |-
-          options(repos = 'https://packagemanager.rstudio.com/all/latest')
-          install.packages('renv')
-          renv::restore()
-        shell: Rscript {0}  
-      - name: Render Site
-        env:
-          LAOCRUG_TOKEN: ${{ secrets.LAOCRUG_TOKEN }}
-          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
-        run: |-
-          # source(here::here('R', 'download_events.R'))
-          rmarkdown::render('events.Rmd')
-          distill:::render_website(dir = '.', 'website')
+        uses: r-lib/actions/pr-fetch@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Quarto CLI
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+          version: 1.2.280
+
+      - name: Setup R 
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.2.2'
+          use-public-rspm: true
+      
+      - name: Setup renv
+        uses: r-lib/actions/setup-renv@v2
+
+      - name: Fetch Events from Meetup
+        run: source(here::here("helpers", "meetup_events.R"))
         shell: Rscript {0}
-        
-      - name: Install npm
-        uses: actions/setup-node@v1
 
-      - name: Deploy to Netlify
-        # NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID added in the repo's secrets
-        env:
+      - name: Render and Publish to Netlify
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: |
-          npm install netlify-cli -g
-          netlify deploy --prod
 
+      - name: Push Changes
+        uses: r-lib/actions/pr-push@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

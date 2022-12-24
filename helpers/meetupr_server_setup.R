@@ -1,3 +1,6 @@
+
+# One-Time Key Encryption Setup -------------------------------------------
+
 ### Create a key
 
 token_path <- "~/Library/Application Support/meetupr/meetup_token.rds"
