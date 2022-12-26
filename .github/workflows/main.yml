@@ -40,7 +40,7 @@ jobs:
 
       - name: Fetch Events from Meetup
         run: source(here::here("helpers", "meetup_events.R"))
-        with:
+        env:
           MEETUPR_PWD: ${{ secrets.MEETUPR_PWD }}
         shell: Rscript {0}
 
