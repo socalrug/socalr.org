@@ -27,7 +27,6 @@ jobs:
       - name: Setup Quarto CLI
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          tinytex: true
           version: 1.2.280
 
       - name: Setup R 
