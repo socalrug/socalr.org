@@ -18,24 +18,24 @@ library(meetupr)
 library(cyphr)
 
 # Decrypt and Use MeetupR Token for CI/CD
-key <- cyphr::key_sodium(sodium::hex2bin(Sys.getenv("MEETUPR_PWD")))
-
-temptoken <- tempfile(fileext = ".rds")
-
-cyphr::decrypt_file("meetupr_secret.rds",
-                    key = key,
-                    dest = temptoken)
-
-token <- readRDS(temptoken)[[1]]
-
-# meetupr auth
-token <- meetupr::meetup_auth(
-  token = token,
-  use_appdir = FALSE,
-  cache = FALSE
-)
-
-Sys.setenv(MEETUPR_PAT = temptoken)
+# key <- cyphr::key_sodium(sodium::hex2bin(Sys.getenv("MEETUPR_PWD")))
+# 
+# temptoken <- tempfile(fileext = ".rds")
+# 
+# cyphr::decrypt_file("meetupr_secret.rds",
+#                     key = key,
+#                     dest = temptoken)
+# 
+# token <- readRDS(temptoken)[[1]]
+# 
+# # meetupr auth
+# token <- meetupr::meetup_auth(
+#   token = token,
+#   use_appdir = FALSE,
+#   cache = FALSE
+# )
+# 
+# Sys.setenv(MEETUPR_PAT = temptoken)
 
 socal_groups <- c("SOCAL-RUG", 
                   "Santa-Barbara-R-Users-Group", 
