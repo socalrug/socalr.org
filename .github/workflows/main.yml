@@ -39,14 +39,9 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
 
       - name: Fetch Events from Meetup
-        run: |
-          key <- cyphr::key_sodium(sodium::hex2bin(Sys.getenv("MEETUPR_PWD")))
-          temptoken <- tempfile(fileext = ".rds")
-          cyphr::decrypt_file("meetupr_secret.rds", key = key, dest = temptoken)
-          token <- readRDS(temptoken)[[1]]
-          token <- meetupr::meetup_auth(token = token, use_appdir = FALSE, cache = FALSE)
-          Sys.setenv(MEETUPR_PAT = temptoken)
-          source(here::here("helpers", "meetup_events.R"))
+        run: source(here::here("helpers", "meetup_events.R"))
+        with:
+          MEETUPR_PWD: ${{ secrets.MEETUPR_PWD }}
         shell: Rscript {0}
 
       - name: Render and Publish to Netlify
