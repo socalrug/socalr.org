@@ -18,7 +18,8 @@ library(meetupr)
 library(cyphr)
 
 # Decrypt and Use MeetupR Token for CI/CD
-key <- cyphr::key_sodium(sodium::hex2bin(Sys.getenv("MEETUPR_PWD")))
+wrap_sodium_key <- sodium::hex2bin(Sys.getenv("MEETUPR_PWD"))
+key <- cyphr::key_sodium(wrap_sodium_key)
 
 temptoken <- tempfile(fileext = ".rds")
 
