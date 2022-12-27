@@ -3,7 +3,9 @@
 
 ### Create a key
 
-token_path <- "~/Library/Application Support/meetupr/meetup_token.rds"
+# After doing a one-time interactive auth with {meetupr},
+# your Meetup token will be stored in the path below
+token_path <- path.expand(file.path("~", "Library", "Application Support", "meetupr", "meetup_token.rds"))
 
 meetupr::meetup_auth(
   token = NULL,
