@@ -1,0 +1,74 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "SoCal RUG"
+  description: "Southern California R Users Group"
+  site-url: "https://socalr.org/"
+
+  repo-url: https://github.com/socalrug/socalr.org
+
+  open-graph: true
+
+  twitter-card:
+    creator: "@oc_rug"
+    image: "images/SoCal_RUG_logo.png"
+
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2022, Southern California R Users Group"
+    background: "#CEDDFB"
+
+  sidebar:
+    background: "#CEDDFB"
+    logo: "images/SoCal_RUG_Hex.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/socalrug
+        text: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/company/socalrug/
+        text: LinkedIn
+      - icon: twitter
+        href: https://twitter.com/oc_rug
+        text: "Twitter: @oc_rug"
+      - icon: envelope
+        href: "mailto:orangecounty.rug@gmail.com"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "About"
+        contents:
+          - href: index.qmd
+            text: Events Archive
+          - text: '<a href="https://www.meetup.com/socal-rug/" target="_blank">Join our Meetups</a>'
+          - text: '<a href="https://github.com/socalrug/presentations" target="_blank">Past Presentations</a>'
+          - text: '<a href="mailto:orangecounty.rug@gmail.com" target="_blank">Contact Us</a>'
+      - section: "Hackathons"
+        contents:
+          - text: '<a href="https://github.com/socalrug/hackathon-2022-04" target="_blank">Apr 2022</a>'
+          - text: '<a href="https://github.com/socalrug/hackathon-2021-04" target="_blank">Apr 2021</a>'
+          - text: '<a href="https://github.com/socalrug/hackathon-2020-04" target="_blank">Apr 2020</a>'
+          - text: '<a href="https://github.com/socalrug/hackathon-2019-11" target="_blank">Nov 2019</a>'
+          - text: '<a href="https://github.com/socalrug/hackathon-2019-05" target="_blank">May 2019</a>'
+      - section: "2022 Workshops"
+        contents:
+          - text: '<a href="https://www.meetup.com/socal-rug/events/289510286/" target="_blank">Portfolio Building</a>'
+          - text: '<a href="https://github.com/socalrug/advanced_regression_2022-10-01" target="_blank">Advanced Regressions</a>'
+          - text: '<a href="https://github.com/socalrug/msba-python-workshop-2022-07" target="_blank">Intro to Python</a>'
+          - text: '<a href="https://github.com/socalrug/nonparametric_analysis_2022-01-22" target="_blank">Nonparametric Analysis</a>'
+
+format:
+  html:
+    theme: theme.scss
+    fontsize: 1.0em
+    mainfont: "Montserrat"
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+    link-external-newwindow: true
