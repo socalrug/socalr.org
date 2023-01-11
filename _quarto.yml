@@ -16,7 +16,6 @@ website:
     image: "images/SoCal_RUG_logo.png"
 
   page-footer:
-    right: "This page is built with [Quarto](https://quarto.org/)."
     left: "&copy; Copyright 2023, Southern California R Users Group"
     background: "#CEDDFB"
 
