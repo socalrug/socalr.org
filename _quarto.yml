@@ -17,7 +17,7 @@ website:
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2022, Southern California R Users Group"
+    left: "&copy; Copyright 2023, Southern California R Users Group"
     background: "#CEDDFB"
 
   sidebar:
