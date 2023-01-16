@@ -1,12 +1,8 @@
 ###--------------------------------------------------------------------------###
-###   REMAINING STEPS:                                                       ###
-###   https://rladies.github.io/meetupr/articles/setup.html                  ###
-###--------------------------------------------------------------------------###
-# 1.  Save the MEETUPR_PWD environment variable as secret on CI (actually      #
-#     called repo secret for e.g. GitHub Actions)                              #
-# 2.  Use the code below to decrypt the secret before using meetupr. We save   #
+# 1.  Save the MEETUPR_PWD environment variable as secret for GitHub Actions   #
+# 2.  Use the code below to decrypt the secret before using MeetupR. We save   #
 #     the temporary token to disk but to a temporary folder so it won’t end    #
-#     up in a package check artefact.                                          #
+#     up in a package check artifact.                                          #
 ###--------------------------------------------------------------------------###
 
 # Load packages
