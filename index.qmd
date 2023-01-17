@@ -14,7 +14,7 @@ Welcome to the Southern California R Users Group (SoCal RUG)! Since no single gr
 
 In addition to our core SoCal RUG team, our archive includes events hosted by our extended R alliance including the following groups: [R-Ladies Irvine](https://www.rladiesirvine.org/), [R-Ladies Los Angeles](https://www.meetup.com/rladies-la/), [R-Ladies Pasadena](https://www.meetup.com/rladies-pasadena/), [R-Ladies Riverside](https://rladies.github.io/riverside/), [R-Ladies Santa Barbara](https://www.meetup.com/rladies-santa-barbara/), [R-Ladies San Diego](https://www.meetup.com/rladies-san-diego/), [Santa Barbara RUG](https://www.meetup.com/Santa-Barbara-R-Users-Group/), and [San Luis Obispo RUG](https://www.meetup.com/useR-Group-in-San-Luis-Obispo-County/).
 
-# Events Archive
+# Events
 
 ```{r}
 #| echo: false
