@@ -50,9 +50,9 @@ website:
     search: true
     collapse-level: 1
     contents:
+      - text: '<a href="https://www.meetup.com/socal-rug/" target="_blank">Join our Meetups</a>'
       - href: index.qmd
         text: Events
-      - text: '<a href="https://www.meetup.com/socal-rug/" target="_blank">Join our Meetups</a>'
       - text: '<a href="https://github.com/socalrug/presentations" target="_blank">Past Presentations</a>'
       - section: "Hackathons"
         contents:
