@@ -76,6 +76,6 @@ events <- events_raw |>
                 Event = paste0('<a href=', '"', link, '">', title, '</a>'),
                 Date = lubridate::as_date(time),
                 Time = format.POSIXct(time, format = "%I:%M %p")) |> 
-  dplyr::select(Upcoming, Chapter, Event, Date, "Time (PST)" = Time)
+  dplyr::select(Upcoming, Chapter, Event, Date, Time, link, title)
 
 saveRDS(events, file = "events/events_past_and_upcoming.rds")

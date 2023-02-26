@@ -6,3 +6,44 @@ $font-family: "Montserrat", sans-serif;
 
 /*-- scss:rules --*/
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 24px 8px 24px 8px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-header {
+  background-color: #EAF3FF;
+  font-size: 18px;
+  padding: 4px 16px 4px 16px;
+}
+
+.card-header-upcoming {
+  background-color: #EBF5F1;
+  font-size: 18px;
+  padding: 4px 16px 4px 16px;
+}
+
+.card-header:hover, .card-header-upcoming:hover {
+  transform:scale(1)
+}
+
+.card-body {
+  padding: 4px 16px 4px 16px;
+}
+
+.card-title {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+.callout.callout-style-default>div.callout-header {
+  font-size: 20px;
+}

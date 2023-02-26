@@ -7,6 +7,7 @@ toc: false
 ```{r}
 #| include: false
 
+source(here::here("helpers", "class_cards.R"))
 events <- readRDS(file.path("events", "events_past_and_upcoming.rds"))
 ```
 
@@ -14,19 +15,39 @@ Welcome to the Southern California R Users Group (SoCal RUG)! Since no single gr
 
 In addition to our core SoCal RUG team, our archive includes events hosted by our extended R alliance including the following groups: [R-Ladies Irvine](https://www.rladiesirvine.org/), [R-Ladies Los Angeles](https://www.meetup.com/rladies-la/), [R-Ladies Pasadena](https://www.meetup.com/rladies-pasadena/), [R-Ladies Riverside](https://rladies.github.io/riverside/), [R-Ladies Santa Barbara](https://www.meetup.com/rladies-santa-barbara/), [R-Ladies San Diego](https://www.meetup.com/rladies-san-diego/), [Santa Barbara RUG](https://www.meetup.com/Santa-Barbara-R-Users-Group/), and [San Luis Obispo RUG](https://www.meetup.com/useR-Group-in-San-Luis-Obispo-County/).
 
-# Events
+***
+
+::: {.callout-tip}
+## Upcoming Events
+:::
 
 ```{r}
 #| echo: false
 
-library(kableExtra)
+upcoming_events <- events |> dplyr::filter(Upcoming != "")
 
-events |> 
-  knitr::kable(align = c("c", "l", "l", "l", "l"), escape = FALSE) |> 
-  kableExtra::kable_styling(bootstrap_options = "basic") |> 
-  kableExtra::column_spec(column = 1, width = "8em") |> 
-  kableExtra::column_spec(column = 2, width = "15em") |> 
-  kableExtra::column_spec(column = 3, width = "25em") |> 
-  kableExtra::column_spec(column = 4, width = "7em") |> 
-  kableExtra::column_spec(column = 5, width = "6em")
+if (nrow(upcoming_events) == 0) {
+  paste("Stay Tuned! There are no scheduled upcoming events.")
+} else {
+  htmltools::tagList(
+    upcoming_events |> 
+      purrr::pmap(as_card_upcoming)
+  )
+}
+```
+
+***
+
+::: {.callout-note}
+## Past Events
+:::
+
+```{r}
+#| echo: false
+
+htmltools::tagList(
+  events |> 
+    dplyr::filter(Upcoming == "") |> 
+    purrr::pmap(as_card)
+)
 ```
