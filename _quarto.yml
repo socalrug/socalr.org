@@ -13,15 +13,15 @@ website:
 
   twitter-card:
     creator: "@oc_rug"
-    image: "images/SoCal_RUG_logo.png"
+    image: "images/logo_text_blue_background.png"
 
   page-footer:
     left: "&copy; Copyright 2023, Southern California R Users Group"
-    background: "#CEDDFB"
+    background: "#3469B6"
 
   sidebar:
-    background: "#CEDDFB"
-    logo: "images/SoCal_RUG_Hex.png"
+    background: "#3469B6"
+    logo: "images/logo_text_blue_background.png"
     pinned: true
     align: center
     tools:
