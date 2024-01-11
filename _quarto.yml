@@ -28,23 +28,30 @@ website:
       - icon: github
         href: https://github.com/socalrug
         text: GitHub
+        target: _blank
       - icon: slack
         href: https://socalrug.slack.com/
         text: Slack
+        target: _blank
       - icon: linkedin
         href: https://www.linkedin.com/company/socalrug/
         text: LinkedIn
+        target: _blank
       - icon: twitter
         href: https://twitter.com/oc_rug
         text: "Twitter: @oc_rug"
+        target: _blank
       - icon: instagram
         href: https://www.instagram.com/socalrug/
         text: "Instagram: @socalrug"
+        target: _blank
       - icon: youtube
         href: https://www.youtube.com/@SouthernCaliforniaRUsersGroup
         text: YouTube
+        target: _blank
       - icon: envelope
         href: "mailto:orangecounty.rug@gmail.com"
+        target: _blank
 
     style: "docked"
     search: true
