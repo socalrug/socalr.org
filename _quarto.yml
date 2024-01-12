@@ -25,86 +25,116 @@ website:
     pinned: true
     align: center
     tools:
-      - icon: github
+      - text: "GitHub"
+        icon: github
         href: https://github.com/socalrug
-        text: GitHub
         target: _blank
-      - icon: slack
+      - text: "Slack"
+        icon: slack
         href: https://socalrug.slack.com/
-        text: Slack
         target: _blank
-      - icon: linkedin
+      - text: "LinkedIn"
+        icon: linkedin
         href: https://www.linkedin.com/company/socalrug/
-        text: LinkedIn
         target: _blank
-      - icon: twitter
+      - text: "Twitter: @oc_rug"
+        icon: twitter
         href: https://twitter.com/oc_rug
-        text: "Twitter: @oc_rug"
         target: _blank
-      - icon: instagram
+      - text: "Instagram: @socalrug"
+        icon: instagram
         href: https://www.instagram.com/socalrug/
-        text: "Instagram: @socalrug"
         target: _blank
-      - icon: youtube
+      - text: "YouTube"
+        icon: youtube
         href: https://www.youtube.com/@SouthernCaliforniaRUsersGroup
-        text: YouTube
         target: _blank
-      - icon: envelope
-        href: "mailto:orangecounty.rug@gmail.com"
+      - href: "mailto:orangecounty.rug@gmail.com"
+        icon: envelope
         target: _blank
 
     style: "docked"
     search: true
     collapse-level: 1
     contents:
-      - text: '<a href="https://www.meetup.com/socal-rug/" target="_blank">Join our Meetups</a>'
-      - href: index.qmd
-        text: Events
-      - text: '<a href="https://github.com/socalrug/presentations" target="_blank">Past Presentations</a>'
+      - text: "Join our Meetups"
+        href: https://www.meetup.com/socal-rug/
+      - text: "Events"
+        href: index.qmd
+      - text: "Past Presentations"
+        href: https://github.com/socalrug/presentations
       - section: "Hackathons"
         contents:
-          - text: '<a href="https://github.com/socalrug/hackathon-2022-04" target="_blank">2022-04</a>'
-          - text: '<a href="https://github.com/socalrug/hackathon-2021-04" target="_blank">2021-04</a>'
-          - text: '<a href="https://github.com/socalrug/hackathon-2020-04" target="_blank">2020-04</a>'
-          - text: '<a href="https://github.com/socalrug/hackathon-2019-11" target="_blank">2019-11</a>'
-          - text: '<a href="https://github.com/socalrug/hackathon-2019-05" target="_blank">2019-05</a>'
+          - text: "2022-04"
+            href: https://github.com/socalrug/hackathon-2022-04
+          - text: "2021-04"
+            href: https://github.com/socalrug/hackathon-2021-04
+          - text: "2020-04"
+            href: https://github.com/socalrug/hackathon-2020-04
+          - text: "2019-11"
+            href: https://github.com/socalrug/hackathon-2019-11
+          - text: "2019-05"
+            href: https://github.com/socalrug/hackathon-2019-05
       - section: "Book Clubs"
         contents:
-          - text: '<a href="https://www.meetup.com/socal-rug/events/290821300/" target="_blank">2023-01: Advanced Probabilistic ML</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/284913426/" target="_blank">2022-04: Forecasting Principles and Practice</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/283044538/" target="_blank">2022-01: Information Rules</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/280319522/" target="_blank">2021-09: Introduction to Statistical Learning</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/278765369/" target="_blank">2021-07: OpenIntro Statistics</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/278831056/" target="_blank">2021-07: Communicating with Data</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/276575373/" target="_blank">2021-03: Text Mining with R</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/275783285/" target="_blank">2021-02: Mastering Spark with R</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/275719547/" target="_blank">2021-01: R for Data Science</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/272034792/" target="_blank">2020-09: Advanced R</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/270076542/" target="_blank">2020-05: Applied Predictive Modeling</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/268226879/" target="_blank">2020-02: Feature Engineering & Selection</a>'
-          - text: '<a href="https://www.meetup.com/socal-rug/events/266912350/" target="_blank">2020-01: R for Data Science</a>'
+          - text: "2023-01: Advanced Probabilistic ML"
+            href: https://www.meetup.com/socal-rug/events/290821300/
+          - text: "2022-04: Forecasting Principles and Practice"
+            href: https://www.meetup.com/socal-rug/events/284913426/
+          - text: "2022-01: Information Rules"
+            href: https://www.meetup.com/socal-rug/events/283044538/
+          - text: "2021-09: Introduction to Statistical Learning"
+            href: https://www.meetup.com/socal-rug/events/280319522/
+          - text: "2021-07: OpenIntro Statistics"
+            href: https://www.meetup.com/socal-rug/events/278765369/
+          - text: "2021-07: Communicating with Data"
+            href: https://www.meetup.com/socal-rug/events/278831056/
+          - text: "2021-03: Text Mining with R"
+            href: https://www.meetup.com/socal-rug/events/276575373/
+          - text: "2021-02: Mastering Spark with R"
+            href: https://www.meetup.com/socal-rug/events/275783285/
+          - text: "2021-01: R for Data Science"
+            href: https://www.meetup.com/socal-rug/events/275719547/
+          - text: "2020-09: Advanced R"
+            href: https://www.meetup.com/socal-rug/events/272034792/
+          - text: "2020-05: Applied Predictive Modeling"
+            href: https://www.meetup.com/socal-rug/events/270076542/
+          - text: "2020-02: Feature Engineering & Selection"
+            href: https://www.meetup.com/socal-rug/events/268226879/
+          - text: "2020-01: R for Data Science"
+            href: https://www.meetup.com/socal-rug/events/266912350/
       - section: "2023 Workshops"
         contents:
-          - text: '<a href="https://www.meetup.com/socal-rug/events/290969003/" target="_blank">2023-02: Introduction to Stochastic Processes</a>'
+          - text: "2023-02: Introduction to Stochastic Processes"
+            href: https://www.meetup.com/socal-rug/events/290969003/
       - section: "2022 Workshops"
         contents:
-          - text: '<a href="https://www.meetup.com/socal-rug/events/289510286/" target="_blank">2022-11: Portfolio Building</a>'
-          - text: '<a href="https://github.com/socalrug/advanced_regression_2022-10-01" target="_blank">2022-10: Advanced Regressions</a>'
-          - text: '<a href="https://github.com/socalrug/msba-python-workshop-2022-07" target="_blank">2022-07: Intro to Python</a>'
-          - text: '<a href="https://github.com/socalrug/nonparametric_analysis_2022-01-22" target="_blank">2022-01: Nonparametric Analysis</a>'
+          - text: "2022-11: Portfolio Building"
+            href: https://www.meetup.com/socal-rug/events/289510286/
+          - text: "2022-10: Advanced Regressions"
+            href: https://github.com/socalrug/advanced_regression_2022-10-01
+          - text: "2022-07: Intro to Python"
+            href: https://github.com/socalrug/msba-python-workshop-2022-07
+          - text: "2022-01: Nonparametric Analysis"
+            href: https://github.com/socalrug/nonparametric_analysis_2022-01-22
       - section: "2021 Workshops"
         contents:
-          - text: '<a href="https://www.meetup.com/socal-rug/events/281984572/" target="_blank">2021-11: Portfolio Building</a>'
-          - text: '<a href="https://github.com/socalrug/regression_models_2021-02-09" target="_blank">2021-02: Modeling Normally Distributed Data with Repeated Measures</a>'
+          - text: "2021-11: Portfolio Building"
+            href: https://www.meetup.com/socal-rug/events/281984572/
+          - text: "2021-02: Modeling Normally Distributed Data with Repeated Measures"
+            href: https://github.com/socalrug/regression_models_2021-02-09
       - section: "2020 Workshops"
         contents:
-          - text: '<a href="https://www.meetup.com/socal-rug/events/274071838/" target="_blank">2020-11: Portfolio Building</a>'
-          - text: '<a href="https://github.com/socalrug/regression_models_2020-10-13" target="_blank">2020-10: Regression Models with R Applications</a>'
-          - text: '<a href="https://github.com/socalrug/msba-python-workshop-2020-07" target="_blank">2020-07: Intro to Python</a>'
-      - href: code_of_conduct.qmd
-        text: Code of Conduct
-      - text: '<a href="mailto:orangecounty.rug@gmail.com" target="_blank">Contact Us</a>'
-
+          - text: "2020-11: Portfolio Building"
+            href: https://www.meetup.com/socal-rug/events/274071838/
+          - text: "2020-10: Regression Models with R Applications"
+            href: https://github.com/socalrug/regression_models_2020-10-13
+          - text: "2020-07: Intro to Python"
+            href: https://github.com/socalrug/msba-python-workshop-2020-07
+      - text: "Code of Conduct"
+        href: code_of_conduct.qmd
+      - text: "Contact Us"
+        href: mailto:orangecounty.rug@gmail.com
 
 format:
   html:
